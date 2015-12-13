@@ -1,0 +1,31 @@
+*{
+    font-family: "·L³n¥¿¶ÂÅé","Microsoft JhengHei",'Source Sans Pro', sans-serif;
+}
+.container{
+    position: absolute; 
+    border: 1px solid; 
+    width: 1000px; 
+    height: 550px;
+    right: 10px;
+}
+.inside{
+    position: absolute;
+    width: 950px;
+    height: 500px;
+    top: 25px;
+    right: 25px;
+    overflow: hidden;
+}
+.inside-img{
+    position: absolute;
+    width: 912px;
+    height: 462px;
+    top: 19px;
+    right: 19px;
+    overflow: auto;
+}
+.oven{
+    display: inline-block;
+    width: 300px;
+    height: 230px;
+}

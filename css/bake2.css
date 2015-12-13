@@ -1,0 +1,53 @@
+*{
+    font-family: "·L³n¥¿¶ÂÅé","Microsoft JhengHei",'Source Sans Pro', sans-serif;
+}
+.container{
+    position: absolute; 
+    border: 1px solid; 
+    width: 1000px; 
+    height: 550px;
+    right: 10px;
+}
+.inside {
+    position: absolute;
+    width: 810px;
+    height: 500px;
+    top: 25px;
+    right: 96px;
+    overflow: visible;
+}
+.oven{
+    position: absolute;
+    width: 653px;
+    height: 500px;
+    top: 0px;
+    left: 0px;
+    overflow: visible;
+}
+.start{
+    position: absolute;
+    width: 150px;
+    height: 110px;
+    top: 190px;
+    right: 0px;
+    overflow: visible;
+    font-size: 30px;
+}
+.count{
+    position: absolute;
+    width: 150px;
+    height: 181.5px;
+    top: 0px;
+    right: 0px;
+    overflow: visible;
+    font-size: 30px;
+}
+.material{
+    position: absolute;
+    width: 150px;
+    height: 191.5px;
+    bottom: 0px;
+    right: 0px;
+    overflow: visible;
+    font-size: 30px;
+}
