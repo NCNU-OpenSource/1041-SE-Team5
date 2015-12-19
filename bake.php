@@ -30,7 +30,7 @@ p{
 金幣：</p><br/>
 <button style="position:absolute; bottom:10px; left:10px; width:120px; height:40px; font-size:20px">材料包</button>
 <button style="position:absolute; bottom:10px; left:140px;width:120px; height:40px; font-size:20px;">麵包圖鑑</button>
-<button onclick="self.location.href='main.php'" style="position:absolute; bottom:10px; right:10px;width:120px; height:40px; font-size:20px;">返回</button>
+<button onclick="self.location.href='kitchen.php'" style="position:absolute; bottom:10px; right:10px;width:120px; height:40px; font-size:20px;">返回</button>
 </head>
 <body>
 

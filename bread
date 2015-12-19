@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>快樂小廚房</title>
+<style type="text/css">
+body {
+background-color:#DAA520;
+}
+#container {
+/* box-sizing: border-box; */
+width: 900px;
+margin: 20px auto;
+padding:20px;
+border: 1px solid #ccc;
+position:relative;
+background-color:#efc;
+}
+#banner {
+color:ivory;
+background-color:darkOliveGreen;
+padding:20px;
+}
+#content {
+box-sizing: border-box;
+padding: 20px;
+background-color: aliceBlue;
+margin-top:20px;
+border: 1px solid #ccc;
+width: 740px;
+line-height: 28px;
+}
+#menu {
+position: absolute;
+right: 20px;
+top:390px;
+}
+p {text-indent: 2pc;
+text-align:justify;
+font-size: 12pt;
+/* line-height: 18pt; */
+}
+table {width: 300px}
+td {text-align: right}
+td+td {text-align:left; padding-left:10px}
+h1 {
+font-size: 30px;
+color: greenYellow;
+}
+h2 {
+/* background-image: url(h-bg.jpg); 
+   background-repeat: repeat-y;    */
+background: linear-gradient(to right,#ef3 60%, #6f6);
+padding:5px 0px 3px 10px;
+border-left:5px double darkGreen;
+border-bottom: 1px solid black;
+font-size: 18pt;
+letter-spacing: 4pt;
+}
+img {
+border: 2px solid white;
+border-color: white #666 #666 white;
+background-color:ivory;
+padding:10px;
+margin: 10px 0px;
+}
+#content img:nth-of-type(odd) {
+float: right;
+margin: 0px 0px 15px 15px;
+width:250px;
+padding: 10px;
+}
+.left {
+float: left;
+margin: 0px 15px 15px 0px;
+width:250px;
+padding:10px;
+}
+
+a {text-decoration:none;
+color: white;
+}
+ul {
+list-style-type: none;
+}
+li {
+line-height: 45px
+}
+li a {
+display:block;
+width: 125px;
+background-image: url(btn1-1.png);
+background-repeat: no-repeat;
+background-position: center;
+text-indent: 10px;
+}
+li a:hover {
+background-image: url(btn1-2.png);
+color: gold;
+font-weight: bold;
+}
+</style>
+<body>
+<table align="center" border="5" width="60%" cellspacing="10" cellpadding="5">
+<caption>麵包圖鑑</caption>
+<thead><tr><th><img src="images.jpg"width="80"/>紅豆麵包<br/>20元</th><th><img src="images.jpg"width="80"/>紅豆麵包<br/>20元</th><th><img src="images.jpg"width="80"/>紅豆麵包<br/>20元</th><th><img src="images.jpg"width="80"/>紅豆麵包<br/>20元</th></tr></thead>
+<thead><tr><th><img src="images.jpg"width="80"/>紅豆麵包<br/>20元</th><th><img src="images.jpg"width="80"/>紅豆麵包<br/>20元</th><th><img src="images.jpg"width="80"/>紅豆麵包<br/>20元</th><th><img src="images.jpg"width="80"/>紅豆麵包<br/>20元</th></tr></thead>
+<thead><tr><th><img src="images.jpg"width="80"/>紅豆麵包<br/>20元</th><th><img src="images.jpg"width="80"/>紅豆麵包<br/>20元</th><th><img src="images.jpg"width="80"/>紅豆麵包<br/>20元</th><th><img src="images.jpg"width="80"/>紅豆麵包<br/>20元</th></tr></thead>
+<thead><tr><th><img src="images.jpg"width="80"/>紅豆麵包<br/>20元</th><th><img src="images.jpg"width="80"/>紅豆麵包<br/>20元</th><th><img src="images.jpg"width="80"/>紅豆麵包<br/>20元</th><th><img src="images.jpg"width="80"/>紅豆麵包<br/>20元</th></tr></thead>
+
+
+</table>
+</body>
+</html>
