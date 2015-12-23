@@ -1,36 +1,59 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
-@media (max-width: @screen-xs-max) { ... }
-@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }
-@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { ... }
-@media (min-width: @screen-lg-min) { ... }
 *{
     font-family: "·L³n¥¿¶ÂÅé","Microsoft JhengHei",'Source Sans Pro', sans-serif;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
-.container{
-    position: absolute; 
-    border: 1px solid; 
-    width: 1000px; 
-    height: 550px;
-    right: 10px;
+html, body{
+    height:100%;
+    width:100%;
 }
-.inside{
-    position: absolute;
-    width: 950px;
-    height: 500px;
-    top: 25px;
-    right: 25px;
-    overflow: hidden;
+p{
+	font-size: 20px;
+	line-height: 30px;
 }
-.inside-img{
-    position: absolute;
-    width: 912px;
-    height: 462px;
-    top: 19px;
-    right: 19px;
-    overflow: auto;
+button{
+    width:100%; 
+    height:40px; 
+}
+.container-fluid{
+    padding:20px;
+}
+.no-gutter > [class*='col-'] {
+    padding-right:0px;
+    padding-left:0px;
+}
+#wrapper{
+    margin-bottom:10px;
+    margin-top:10px;
+}
+#section1-1{
+
+}
+#button{
+    height:40px;
+}
+#main{ 
+    background:top repeat  url('../material/back.jpg');
+    position:relative;
+    height:0;
+    padding-bottom:40%;
+    overflow:hidden;
+}
+#leftbar{
+
+}
+#space{
+    min-height:8px;
+    max-height:10px;
 }
 .oven{
-    display: inline-block;
+    background:top no-repeat  url('../img/oven.png');
     width: 300px;
     height: 230px;
+}
+#oven1,#oven2,#oven3,#oven4{
+    margin:0 auto;
+    text-align:center;
 }
