@@ -10,6 +10,15 @@
 <link rel="stylesheet" href="css/kitchen.css">
 <title>快樂廚房</title>
 </head>
+<style type="text/css">
+body {
+background-color:#DAA520;
+background-image:url(bread/back.jpg);
+background-opacity:0.1;
+background-position: 150px 300px;
+}
+
+</style>
 <body>
 <div class="container-fluid">
     <div class="row" id="wrapper">
@@ -31,15 +40,11 @@
                 <div class="col-md-12" id="space"> </div>
             </div>
             <div class="row no-gutter" id="button">
-                <div class="col-md-1 col-xs-4">
-                    <button>材料包</button>
-                </div>
-                <div class="col-md-1 col-xs-4">
-                    <button>麵包圖鑑</button>
-                </div>
-                <div class="col-md-1 col-xs-4 col-md-offset-9">
-                    <button>返回</button>
-                </div>
+
+<button onclick="self.location.href='材料包.php'" style="position:absolute; bottom:10px; left:10px; width:120px; height:40px; font-size:20px">材料包</button>
+<button onclick="self.location.href='bread.php'" style="position:absolute; bottom:10px; left:140px;width:120px; height:40px; font-size:20px;">麵包圖鑑</button>
+<button onclick="self.location.href='login.php'" style="position:absolute; bottom:10px; right:10px;width:120px; height:40px; font-size:20px;">登出</button>
+
             </div>
         </div>
     </div>

@@ -4,12 +4,15 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="css/bake2.css">
-<style>
-p{
-	font-size:20px;
-	line-height: 30px;
+<style type="text/css">
+body {
+background-color:#DAA520;
+background-image:url(bread/back.jpg);
+background-opacity:0.1;
+background-position: 150px 300px;
 }
 </style>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>快樂廚房</title>
 <div class="container">
@@ -24,8 +27,8 @@ p{
 經驗值：<br/>
 等級：<br/>
 金幣：</p><br/>
-<button style="position:absolute; bottom:10px; left:10px; width:120px; height:40px; font-size:20px">材料包</button>
-<button style="position:absolute; bottom:10px; left:140px;width:120px; height:40px; font-size:20px;">麵包圖鑑</button>
+<button onclick="self.location.href='材料包.php'" style="position:absolute; bottom:10px; left:10px; width:120px; height:40px; font-size:20px">材料包</button>
+<button onclick="self.location.href='bread.php'" style="position:absolute; bottom:10px; left:140px;width:120px; height:40px; font-size:20px;">麵包圖鑑</button>
 <button onclick="self.location.href='bake.php'" style="position:absolute; bottom:10px; right:10px;width:120px; height:40px; font-size:20px;">返回</button>
 </head>
 <body>

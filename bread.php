@@ -11,7 +11,7 @@
 <style type="text/css">
 body {
 background-color:#DAA520;
-background-image:url(back2.jpg);
+background-image:url(bread/back.jpg);
 background-opacity:0.1;
 background-position: 150px 300px;
 }
@@ -33,16 +33,16 @@ background-position: 150px 300px;
                 <div class="col-md-9" id="table">
                    <table align="center"  cellspacing="10" cellpadding="8">
 				   <thead><tr>
-				   <th>紅豆麵包<br/><img src="1.jpg"width="200"height="150"/><br/>價錢:25元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
-				   <th>乳酪麵包<br/><img src="2.jpg"width="200"height="150"/><br/>價錢:35元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
-				   <th>蔥花麵包<br/><img src="3.jpg"width="200"height="150"/><br/>價錢:20元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
-				   <th>炸彈麵包<br/><img src="4.jpg"width="200"height="150"/><br/>價錢:35元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
+				   <th>紅豆麵包<br/><img src="bread/1.jpg"width="200"height="150"/><br/>價錢:25元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
+				   <th>乳酪麵包<br/><img src="bread/2.jpg"width="200"height="150"/><br/>價錢:35元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
+				   <th>蔥花麵包<br/><img src="bread/3.jpg"width="200"height="150"/><br/>價錢:20元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
+				   <th>炸彈麵包<br/><img src="bread/4.jpg"width="200"height="150"/><br/>價錢:35元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
 				   </tr></thead>
 				   <thead><tr>
-				   <th>法國麵包<br/><img src="5.jpg"width="200"height="150"/><br/>價錢:40元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
-				   <th>牛奶土司<br/><img src="6.jpg"width="200"height="150"/><br/>價錢:60元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
-				   <th>葡萄吐司<br/><img src="7.jpg"width="200"height="150"/><br/>價錢:65元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
-				   <th>燕麥吐司<br/><img src="8.jpg"width="200"height="150"/><br/>價錢:80元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
+				   <th>法國麵包<br/><img src="bread/5.jpg"width="200"height="150"/><br/>價錢:40元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
+				   <th>牛奶土司<br/><img src="bread/6.jpg"width="200"height="150"/><br/>價錢:60元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
+				   <th>葡萄吐司<br/><img src="bread/7.jpg"width="200"height="150"/><br/>價錢:65元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
+				   <th>燕麥吐司<br/><img src="bread/8.jpg"width="200"height="150"/><br/>價錢:80元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
 				   </tr></thead>
 
 				   <thead><tr><th>交易金額:</th><th></th><th><button>交易</button></th></tr></thead>
@@ -54,15 +54,9 @@ background-position: 150px 300px;
                 <div class="col-md-12" id="space"> </div>
             </div>
             <div class="row no-gutter" id="button">
-                <div class="col-md-1 col-xs-4">
-                    <button>材料包</button>
-                </div>
-                <div class="col-md-1 col-xs-4">
-                    <button>烤箱</button>
-                </div>
-                <div class="col-md-1 col-xs-4 col-md-offset-9">
-                    <button>返回</button>
-                </div>
+<button onclick="self.location.href='材料包.php'" style="position:absolute; bottom:10px; left:10px; width:120px; height:40px; font-size:20px">材料包</button>
+<button onclick="self.location.href='bread.php'" style="position:absolute; bottom:10px; left:140px;width:120px; height:40px; font-size:20px;">麵包圖鑑</button>
+<button onclick="self.location.href='kitchen.php'" style="position:absolute; bottom:10px; right:10px;width:120px; height:40px; font-size:20px;">返回</button>
             </div>
         </div>
     </div>
