@@ -43,15 +43,15 @@
             <div class="row no-gutter">
                 <div class="col-md-12" id="space"> </div>
             </div>
-            <div onclick="self.location.href='材料包.php'" class="row no-gutter" id="button">
+            <div class="row no-gutter" id="button">
                 <div class="col-md-1 col-xs-4">
-                    <button>材料包</button>
+                    <button onclick="self.location.href='材料包.php'">材料包</button>
                 </div>
-                <div onclick="self.location.href='bread.php'" class="col-md-1 col-xs-4">
-                    <button>麵包圖鑑</button>
+                <div class="col-md-1 col-xs-4">
+                    <button onclick="self.location.href='bread.php'">麵包圖鑑</button>
                 </div>
-                <div onclick="self.location.href='kitchen.php'" class="col-md-1 col-xs-4 col-md-offset-9">
-                    <button>返回</button>
+                <div class="col-md-1 col-xs-4 col-md-offset-9">
+                    <button onclick="self.location.href='kitchen.php'">返回</button>
                 </div>
             </div>
         </div>
