@@ -42,6 +42,7 @@ font-size:14pt;
                     </tr></thead>
                     <thead><tr><th>庫存:</th><th></th><th>交易金額:</th><th></th></tr></thead>
                     </table>
+                    <br/><br/><br/><br/><br/><br/>
                 </div>        
             </div>
             <div class="row no-gutter">
