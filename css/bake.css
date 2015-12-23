@@ -8,6 +8,10 @@
 html, body{
     height:100%;
     width:100%;
+    background-color:#DAA520;
+    background-image:url('../bread/back.jpg');
+    background-opacity:0.1;
+    background-position: 150px 300px;
 }
 p{
 	font-size: 20px;
