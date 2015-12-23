@@ -10,17 +10,8 @@
 <link rel="stylesheet" href="css/main.css">
 <title>快樂廚房</title>
 <style type="text/css">
-#table {
-width: 725px;
-position:absolute;
-left:300px;
-top:70px;
-font-size: 14pt;
-td {text-align: left;}
-td+td {text-align:left; padding-left:10px}
-}
-#th {
-padding-left:10px
+#main{
+font-size:14pt;
 }
 </style>
 </head>
@@ -36,18 +27,18 @@ padding-left:10px
                     金幣：</p><br/>
                 </div>
                 <div class="col-md-9" id="main">
-                    <table align="center"  cellspacing="10" cellpadding="5">
+                    <table align="center"  cellspacing="10" cellpadding="5" >
                     <thead><tr>
-                    <th>紅豆麵包<br/><img src="img/1.jpg"width="200"height="150"/><br/>材料包：1<br/></th>
-                    <th>乳酪麵包<br/><img src="img/2.jpg"width="200"height="150"/><br/>材料包：1<br/></th>
-                    <th>蔥花麵包<br/><img src="img/3.jpg"width="200"height="150"/><br/>材料包：2<br/></th>
-                    <th>炸彈麵包<br/><img src="img/4.jpg"width="200"height="150"/><br/>材料包：2<br/></th>
+                    <th width="210"height="165"align="Center">紅豆麵包<br/><img src="img/1.jpg"width="200"height="150"/><br/>材料包：1<br/></th>
+                    <th width="210"height="165"align="Center">乳酪麵包<br/><img src="img/2.jpg"width="200"height="150"/><br/>材料包：1<br/></th>
+                    <th width="210"height="165"align="Center">蔥花麵包<br/><img src="img/3.jpg"width="200"height="150"/><br/>材料包：2<br/></th>
+                    <th width="210"height="165"align="Center">炸彈麵包<br/><img src="img/4.jpg"width="200"height="150"/><br/>材料包：2<br/></th>
                     </tr></thead><br/><br/><br/>
                     <thead><tr>
-                    <th>法國麵包<br/><img src="img/5.jpg"width="200"height="150"/><br/>材料包：2<br/></th>
-                    <th>牛奶土司<br/><img src="img/6.jpg"width="200"height="150"/><br/>材料包：3<br/></th>
-                    <th>葡萄吐司<br/><img src="img/7.jpg"width="200"height="150"/><br/>材料包：3<br/></th>
-                    <th>燕麥吐司<br/><img src="img/8.jpg"width="200"height="150"/><br/>材料包：3<br/></th>
+                    <th width="210"height="165"align="Center">法國麵包<br/><img src="img/5.jpg"width="200"height="150"/><br/>材料包：2<br/></th>
+                    <th width="210"height="165"align="Center">牛奶土司<br/><img src="img/6.jpg"width="200"height="150"/><br/>材料包：3<br/></th>
+                    <th width="210"height="165"align="Center">葡萄吐司<br/><img src="img/7.jpg"width="200"height="150"/><br/>材料包：3<br/></th>
+                    <th width="210"height="165"align="Center">燕麥吐司<br/><img src="img/8.jpg"width="200"height="150"/><br/>材料包：3<br/></th>
                     </tr></thead>
                     <thead><tr><th>庫存:</th><th></th><th>交易金額:</th><th></th></tr></thead>
                     </table>
