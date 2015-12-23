@@ -9,7 +9,9 @@ p{
 	font-size:20px;
 	line-height: 30px;
 }
+
 </style>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>快樂廚房</title>
 <div class="container">
@@ -28,8 +30,8 @@ p{
 經驗值：<br/>
 等級：<br/>
 金幣：</p><br/>
-<button style="position:absolute; bottom:10px; left:10px; width:120px; height:40px; font-size:20px">材料包</button>
-<button style="position:absolute; bottom:10px; left:140px;width:120px; height:40px; font-size:20px;">麵包圖鑑</button>
+<button onclick="self.location.href='材料包.php'" style="position:absolute; bottom:10px; left:10px; width:120px; height:40px; font-size:20px">材料包</button>
+<button onclick="self.location.href='bread.php'" style="position:absolute; bottom:10px; left:140px;width:120px; height:40px; font-size:20px;">麵包圖鑑</button>
 <button onclick="self.location.href='kitchen.php'" style="position:absolute; bottom:10px; right:10px;width:120px; height:40px; font-size:20px;">返回</button>
 </head>
 <body>

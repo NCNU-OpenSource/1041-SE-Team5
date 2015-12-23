@@ -43,8 +43,7 @@ background-position: 150px 300px;
 
 <button onclick="self.location.href='材料包.php'" style="position:absolute; bottom:10px; left:10px; width:120px; height:40px; font-size:20px">材料包</button>
 <button onclick="self.location.href='bread.php'" style="position:absolute; bottom:10px; left:140px;width:120px; height:40px; font-size:20px;">麵包圖鑑</button>
-
-<button onclick="self.location.href='kitchen.php'" style="position:absolute; bottom:10px; right:10px;width:120px; height:40px; font-size:20px;">登出</button>
+<button onclick="self.location.href='login.php'" style="position:absolute; bottom:10px; right:10px;width:120px; height:40px; font-size:20px;">登出</button>
 
             </div>
         </div>
