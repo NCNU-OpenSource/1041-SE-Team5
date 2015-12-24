@@ -30,14 +30,14 @@ td+td {text-align:left; padding-left:10px}
 }
 #picture {
 position:absolute;
-left:30px;
-top:120px;
+left:5%;
+top:25%;
 opacity:0.35;
 }
 #picture2 {
 position:absolute;
-left:30px;
-top:350px;
+left:5%;
+top:60%;
 opacity:0.35;
 }
 button {
