@@ -15,6 +15,42 @@ background-image:url(bread/back.jpg);
 background-opacity:0.1;
 background-position: 150px 300px;
 }
+#leftbar {
+background: linear-gradient(to right,#DEB887 40%,#FFDAB9);
+background-image:url(bread/12.jpg);
+background-repeat: no-repeat;
+padding:8px 0px 3px 10px;
+opacity:0.7;
+letter-spacing: 4pt;
+}
+#table{
+td {text-align: left;}
+td+td {text-align:left; padding-left:10px}
+}
+#picture {
+position:absolute;
+left:30px;
+top:120px;
+opacity:0.35;
+}
+#picture2 {
+position:absolute;
+left:30px;
+top:350px;
+opacity:0.35;
+}
+button {
+background-image:url(bread/13.jpg);
+background-repeat:no-repeat;
+background-position:center;
+padding-left:1pc;
+color:#8B0000;
+}
+button:hover {
+background-image:url(bread/13.jpg);
+color:orange;
+font-weight:bold;
+}
 </style>
 </style>
 <title>快樂廚房</title>
@@ -25,10 +61,11 @@ background-position: 150px 300px;
         <div class="col-md-12" id="section1">
             <div class="row no-gutter" id="section1-1">
                 <div class="col-md-3" id="leftbar">
+				    <p>
                     <p>玩家名稱：<br/>
                     經驗值：<br/>
                     等級：<br/>
-                    金幣：</p><br/>
+					金幣：</p><br/><br/><br/>
                 </div>
                 <div class="col-md-9" id="table">
                    <table align="center"  cellspacing="10" cellpadding="8">
@@ -46,7 +83,7 @@ background-position: 150px 300px;
 				   </tr></thead>
 
 				   <thead><tr><th>交易金額:</th><th></th><th><button>交易</button></th></tr></thead>
-
+                   <br/><br/>
 				   </table>
                 </div>        
             </div>
@@ -55,11 +92,17 @@ background-position: 150px 300px;
             </div>
             <div class="row no-gutter" id="button">
 			<button onclick="self.location.href='material.php'" style="position:absolute; bottom:10px; left:10px; width:120px; height:40px; font-size:20px">材料包</button>
-			<button onclick="self.location.href='bake.php'" style="position:absolute; bottom:10px; left:140px;width:120px; height:40px; font-size:20px;">烤箱</button>
+			<button onclick="self.location.href='bread.php'" style="position:absolute; bottom:10px; left:140px;width:120px; height:40px; font-size:20px;">麵包圖鑑</button>
 			<button onclick="self.location.href='kitchen.php'" style="position:absolute; bottom:10px; right:10px;width:120px; height:40px; font-size:20px;">返回</button>
             </div>
         </div>
     </div>
+	<div id="picture">
+		<p><img src="chef.jpg"width="200"/ ></p>
+	</div>
+	<div id="picture2">
+		<p><img src="chef2.jpg"width="250"/ ></p>
+	</div>
 </div>
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 <!-- 最新編譯和最佳化的 JavaScript -->
