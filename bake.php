@@ -45,7 +45,7 @@
             </div>
             <div class="row no-gutter" id="button">
                 <div class="col-md-1 col-xs-4">
-                    <button onclick="self.location.href='材料包.php'">材料包</button>
+                    <button onclick="self.location.href='material.php'">材料包</button>
                 </div>
                 <div class="col-md-1 col-xs-4">
                     <button onclick="self.location.href='bread.php'">麵包圖鑑</button>
