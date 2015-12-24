@@ -24,6 +24,16 @@ padding:8px 0px 3px 10px;
 opacity:0.7;
 letter-spacing: 4pt;
 }
+#table{
+td {text-align: left;}
+td+td {text-align:left; padding-left:10px}
+}
+#picture {
+position:absolute;
+left:30px;
+top:120px;
+opacity:0.35;
+}
 #picture2 {
 position:absolute;
 left:30px;
@@ -31,14 +41,14 @@ top:350px;
 opacity:0.35;
 }
 button {
-background-image:url(img/13.jpg);
+background-image:url(bread/13.jpg);
 background-repeat:no-repeat;
 background-position:center;
 padding-left:1pc;
 color:#8B0000;
 }
 button:hover {
-background-image:url(img/13.jpg);
+background-image:url(bread/13.jpg);
 color:orange;
 font-weight:bold;
 }

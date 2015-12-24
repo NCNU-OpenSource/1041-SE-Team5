@@ -8,6 +8,50 @@
 <!-- 選擇性佈景主題 -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="css/bake.css">
+<style type="text/css">
+body {
+background-color:#DAA520;
+background-image:url(bread/back.jpg);
+background-opacity:0.1;
+background-position: 150px 300px;
+}
+#leftbar {
+background: linear-gradient(to right,#DEB887 40%,#FFDAB9);
+background-image:url(bread/12.jpg);
+background-repeat: no-repeat;
+padding:8px 0px 3px 10px;
+opacity:0.7;
+letter-spacing: 4pt;
+}
+#table{
+td {text-align: left;}
+td+td {text-align:left; padding-left:10px}
+}
+#picture {
+position:absolute;
+left:30px;
+top:120px;
+opacity:0.35;
+}
+#picture2 {
+position:absolute;
+left:30px;
+top:350px;
+opacity:0.35;
+}
+button {
+background-image:url(bread/13.jpg);
+background-repeat:no-repeat;
+background-position:center;
+padding-left:1pc;
+color:#8B0000;
+}
+button:hover {
+background-image:url(bread/13.jpg);
+color:orange;
+font-weight:bold;
+}
+</style>
 <title>快樂廚房</title>
 </head>
 <body>
