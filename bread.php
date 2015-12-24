@@ -98,10 +98,10 @@ font-weight:bold;
         </div>
     </div>
 	<div id="picture">
-		<p><img src="chef.jpg"width="200"/ ></p>
+		<p><img src="bread/chef.jpg"width="200"/ ></p>
 	</div>
 	<div id="picture2">
-		<p><img src="chef2.jpg"width="250"/ ></p>
+		<p><img src="bread/chef2.jpg"width="250"/ ></p>
 	</div>
 </div>
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>

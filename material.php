@@ -99,6 +99,12 @@ font-weight:bold;
 		<p><img src="bread/11.jpg"width="250"/ ></p>
 	</div>
     </div>
+		<div id="picture">
+		<p><img src="bread/chef.jpg"width="200"/ ></p>
+		</div>
+		<div id="picture2">
+		<p><img src="bread/chef2.jpg"width="250"/ ></p>
+		</div>
 </div>
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 <!-- 最新編譯和最佳化的 JavaScript -->

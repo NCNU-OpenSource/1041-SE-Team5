@@ -75,14 +75,18 @@ font-weight:bold;
                 <div class="col-md-12" id="space"> </div>
             </div>
             <div class="row no-gutter" id="button">
-
-<button onclick="self.location.href='material.php'" style="position:absolute; bottom:10px; left:10px; width:120px; height:40px; font-size:20px">材料包</button>
-<button onclick="self.location.href='bread.php'" style="position:absolute; bottom:10px; left:140px;width:120px; height:40px; font-size:20px;">麵包圖鑑</button>
-<button onclick="self.location.href='login.php'" style="position:absolute; bottom:10px; right:10px;width:120px; height:40px; font-size:20px;">登出</button>
-
+			<button onclick="self.location.href='material.php'" style="position:absolute; bottom:10px; left:10px; width:120px; height:40px; font-size:20px">材料包</button>
+			<button onclick="self.location.href='bread.php'" style="position:absolute; bottom:10px; left:140px;width:120px; height:40px; font-size:20px;">麵包圖鑑</button>
+			<button onclick="self.location.href='login.php'" style="position:absolute; bottom:10px; right:10px;width:120px; height:40px; font-size:20px;">登出</button>
             </div>
         </div>
     </div>
+	<div id="picture">
+		<p><img src="bread/chef.jpg"width="200"/ ></p>
+	</div>
+	<div id="picture2">
+		<p><img src="bread/chef2.jpg"width="250"/ ></p>
+	</div>
 </div>
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 <!-- 最新編譯和最佳化的 JavaScript -->
