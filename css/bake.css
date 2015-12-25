@@ -44,9 +44,16 @@ button{
     height:0;
     padding-bottom:40%;
     overflow:hidden;
+    border-style:double;
+    border-color:#EE7700;
 }
 #leftbar{
-
+    background: linear-gradient(to right,#DEB887 40%,#FFDAB9);
+    background-image:url('../bread/12.jpg');
+    background-repeat: no-repeat;
+    padding:8px 0px 3px 10px;
+    opacity:0.7;
+    letter-spacing: 4pt;
 }
 #space{
     min-height:8px;
@@ -60,4 +67,27 @@ button{
 #oven1,#oven2,#oven3,#oven4{
     margin:0 auto;
     text-align:center;
+}
+#picture {
+position:absolute;
+left:5%;
+top:25%;
+opacity:0.35;
+}
+#picture2 {
+position:absolute;
+left:5%;
+top:60%;
+opacity:0.35;
+}
+.buttons {
+background-image:url('../bread/13.jpg');
+background-repeat:no-repeat;
+background-position:center;
+color:#8B0000;
+}
+.buttons:hover {
+background-image:url('../bread/13.jpg');
+color:orange;
+font-weight:bold;
 }

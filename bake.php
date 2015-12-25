@@ -8,50 +8,9 @@
 <!-- 選擇性佈景主題 -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="css/bake.css">
-<style type="text/css">
-body {
-background-color:#DAA520;
-background-image:url(bread/back.jpg);
-background-opacity:0.1;
-background-position: 150px 300px;
-}
-#leftbar {
-background: linear-gradient(to right,#DEB887 40%,#FFDAB9);
-background-image:url(bread/12.jpg);
-background-repeat: no-repeat;
-padding:8px 0px 3px 10px;
-opacity:0.7;
-letter-spacing: 4pt;
-}
-#table{
-td {text-align: left;}
-td+td {text-align:left; padding-left:10px}
-}
-#picture {
-position:absolute;
-left:5%;
-top:25%;
-opacity:0.35;
-}
-#picture2 {
-position:absolute;
-left:5%;
-top:60%;
-opacity:0.35;
-}
-button {
-background-image:url(bread/13.jpg);
-background-repeat:no-repeat;
-background-position:center;
-padding-left:1pc;
-color:#8B0000;
-}
-button:hover {
-background-image:url(bread/13.jpg);
-color:orange;
-font-weight:bold;
-}
-</style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"
+        src="countdown.min.js">
+    </script>
 <title>快樂廚房</title>
 </head>
 <body>
@@ -60,17 +19,16 @@ font-weight:bold;
         <div class="col-md-12" id="section1">
             <div class="row no-gutter" id="section1-1">
                 <div class="col-md-3" id="leftbar">
-				    <p></p>
                     <p>玩家名稱：<br/>
                     經驗值：<br/>
                     等級：<br/>
-                    金幣：</p><br/><br/><br/>
+                    金幣：</p><br/>
                 </div>
                 <div class="col-md-9" id="main">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-6" id="oven1">
-                                <button type="button" class="oven btn btn-link" onclick=""></button>
+                                <button type="button" class="oven btn btn-link" onclick="#oven_script"></button>
                             </div>
                             <div class="col-md-6" id="oven2">
                                 <button type="button" class="oven btn btn-link" onclick=""></button>
@@ -90,13 +48,13 @@ font-weight:bold;
             </div>
             <div class="row no-gutter" id="button">
                 <div class="col-md-1 col-xs-4">
-                    <button onclick="self.location.href='material.php'">材料包</button>
+                    <button class="buttons" onclick="self.location.href='material.php'">材料包</button>
                 </div>
                 <div class="col-md-1 col-xs-4">
-                    <button onclick="self.location.href='bread.php'">麵包圖鑑</button>
+                    <button class="buttons" onclick="self.location.href='bread.php'">麵包圖鑑</button>
                 </div>
                 <div class="col-md-1 col-xs-4 col-md-offset-9">
-                    <button onclick="self.location.href='kitchen.php'">返回</button>
+                    <button class="buttons" onclick="self.location.href='kitchen.php'">返回</button>
                 </div>
             </div>
         </div>
