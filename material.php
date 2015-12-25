@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 <!-- 選擇性佈景主題 -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/bread.css">
 <title>快樂廚房</title>
 <style type="text/css">
 body {
@@ -18,7 +18,7 @@ background-position: 150px 300px;
 }
 #leftbar {
 background: linear-gradient(to right,#DEB887 40%,#FFDAB9);
-background-image:url(img/12.jpg);
+background-image:url(bread/12.jpg);
 background-repeat: no-repeat;
 padding:8px 0px 3px 10px;
 opacity:0.7;
@@ -31,14 +31,14 @@ top:350px;
 opacity:0.35;
 }
 button {
-background-image:url(img/13.jpg);
+background-image:url(bread/13.jpg);
 background-repeat:no-repeat;
 background-position:center;
 padding-left:1pc;
 color:#8B0000;
 }
 button:hover {
-background-image:url(img/13.jpg);
+background-image:url(bread/13.jpg);
 color:orange;
 font-weight:bold;
 }
@@ -56,7 +56,7 @@ font-weight:bold;
                     等級：<br/>
                     金幣：</p><br/><br/><br/>
                 </div>
-                <div class="col-md-9" id="main">
+                <div class="col-md-9" id="table">
                     <table align="center"  cellspacing="10" cellpadding="5" >
                     <thead><tr>
 					 <br/><br/>
@@ -86,7 +86,7 @@ font-weight:bold;
             </div>
         </div>
 	<div id="picture2">
-		<p><img src="img/11.jpg"width="250"/ ></p>
+		<p><img src="bread/11.jpg"width="250"/ ></p>
 	</div>
     </div>
 </div>
