@@ -31,14 +31,14 @@ td+td {text-align:left; padding-left:10px}
 }
 #picture {
 position:absolute;
-left:30px;
-top:120px;
+left:5%;
+top:25%;
 opacity:0.35;
 }
 #picture2 {
 position:absolute;
-left:30px;
-top:350px;
+left:5%;
+top:60%;
 opacity:0.35;
 }
 button {
@@ -60,10 +60,11 @@ font-weight:bold;
         <div class="col-md-12" id="section1">
             <div class="row no-gutter" id="section1-1">
                 <div class="col-md-3" id="leftbar">
+				    <p></p>
                     <p>玩家名稱：<br/>
                     經驗值：<br/>
                     等級：<br/>
-                    金幣：</p><br/>
+                    金幣：</p><br/><br/><br/>
                 </div>
                 <div class="col-md-9" id="main">
                     <div class="link1">

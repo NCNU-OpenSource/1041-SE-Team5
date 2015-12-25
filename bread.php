@@ -62,7 +62,7 @@ font-weight:bold;
         <div class="col-md-12" id="section1">
             <div class="row no-gutter" id="section1-1">
                 <div class="col-md-3" id="leftbar">
-				    <p>
+				    <p></p>
                     <p>玩家名稱：<br/>
                     經驗值：<br/>
                     等級：<br/>
