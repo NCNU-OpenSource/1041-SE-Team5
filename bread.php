@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 <!-- 選擇性佈景主題 -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/bread.css">
 <style type="text/css">
 body {
 background-color:#DAA520;
@@ -71,16 +71,16 @@ font-weight:bold;
                 <div class="col-md-9" id="table">
                    <table align="center"  cellspacing="10" cellpadding="8">
 				   <thead><tr>
-				   <th>紅豆麵包<br/><img src="bread/1.jpg"width="150"height="100"/><br/>價錢:25元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
-				   <th>乳酪麵包<br/><img src="bread/2.jpg"width="150"height="100"/><br/>價錢:35元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
-				   <th>蔥花麵包<br/><img src="bread/3.jpg"width="150"height="100"/><br/>價錢:20元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
-				   <th>炸彈麵包<br/><img src="bread/4.jpg"width="150"height="100"/><br/>價錢:35元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
+				   <th>紅豆麵包<br/><img src="bread/1.jpg"width="200"height="150"/><br/>價錢:25元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
+				   <th>乳酪麵包<br/><img src="bread/2.jpg"width="200"height="150"/><br/>價錢:35元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
+				   <th>蔥花麵包<br/><img src="bread/3.jpg"width="200"height="150"/><br/>價錢:20元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
+				   <th>炸彈麵包<br/><img src="bread/4.jpg"width="200"height="150"/><br/>價錢:35元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
 				   </tr></thead>
 				   <thead><tr>
-				   <th>法國麵包<br/><img src="bread/5.jpg"width="150"height="100"/><br/>價錢:40元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
-				   <th>牛奶土司<br/><img src="bread/6.jpg"width="150"height="100"/><br/>價錢:60元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
-				   <th>葡萄吐司<br/><img src="bread/7.jpg"width="150"height="100"/><br/>價錢:65元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
-				   <th>燕麥吐司<br/><img src="bread/8.jpg"width="150"height="100"/><br/>價錢:80元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
+				   <th>法國麵包<br/><img src="bread/5.jpg"width="200"height="150"/><br/>價錢:40元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
+				   <th>牛奶土司<br/><img src="bread/6.jpg"width="200"height="150"/><br/>價錢:60元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
+				   <th>葡萄吐司<br/><img src="bread/7.jpg"width="200"height="150"/><br/>價錢:65元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
+				   <th>燕麥吐司<br/><img src="bread/8.jpg"width="200"height="150"/><br/>價錢:80元<br/>時間:5min<br/>庫存:10個<br/><button>+</button><button>-</button><br/>數量:</th>
 				   </tr></thead>
 
 				   <thead><tr><th>交易金額:</th><th></th><th><button>交易</button></th></tr></thead>

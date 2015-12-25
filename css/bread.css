@@ -34,17 +34,17 @@ button{
 #button{
     height:40px;
 }
-#main{
-    background-color:#ccc;
+#table{
     position:relative;
     height:0;
     padding-bottom:40%;
     overflow:hidden;
+	margin:0 auto;
 }
 #leftbar{
 
 }
 #space{
-    min-height:8px;
-    max-height:10px;
+    min-height:4px;
+    max-height:5px;
 }
