@@ -2,10 +2,10 @@
 -- version 4.3.11
 -- http://www.phpmyadmin.net
 --
--- 主機: 127.0.0.1
--- 產生時間： 2015 �?12 ??09 ??13:55
--- 伺服器版本: 5.6.24
--- PHP 版本： 5.6.8
+-- Host: 127.0.0.1
+-- Generation Time: Dec 25, 2015 at 09:58 PM
+-- Server version: 5.6.24
+-- PHP Version: 5.6.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,92 +17,116 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- 資料庫： `kitchen`
+-- Database: `kitchen`
 --
 
 -- --------------------------------------------------------
 
 --
--- 資料表結構 `bread`
+-- Table structure for table `bread`
 --
 
 CREATE TABLE IF NOT EXISTS `bread` (
-  `id` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `m_num` int(11) NOT NULL,
-  `time` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `bid` int(11) NOT NULL,
+  `bname` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `baketime` int(11) NOT NULL,
+  `m_cost` int(11) NOT NULL,
+  `sellmoney` int(11) NOT NULL,
+  `avallevel` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- 資料表的匯出資料 `bread`
+-- Dumping data for table `bread`
 --
 
-INSERT INTO `bread` (`id`, `m_num`, `time`) VALUES
-('吐司', 1, 10);
+INSERT INTO `bread` (`bid`, `bname`, `baketime`, `m_cost`, `sellmoney`, `avallevel`) VALUES
+(1, '甜甜圈', 120, 10, 15, 1);
 
 -- --------------------------------------------------------
 
 --
--- 資料表結構 `manager`
+-- Table structure for table `ovenplayer`
 --
 
-CREATE TABLE IF NOT EXISTS `manager` (
-  `id` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `pwd` varchar(20) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- 資料表的匯出資料 `manager`
---
-
-INSERT INTO `manager` (`id`, `pwd`) VALUES
-('Bob', '0000');
+CREATE TABLE IF NOT EXISTS `ovenplayer` (
+  `oid` int(11) NOT NULL,
+  `pname` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bid` int(11) NOT NULL,
+  `btime` int(11) NOT NULL,
+  `status` int(11) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- 資料表結構 `player`
+-- Table structure for table `player`
 --
 
 CREATE TABLE IF NOT EXISTS `player` (
-  `id` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `pid` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `pname` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `pwd` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `exp` int(11) NOT NULL DEFAULT '0',
   `level` int(11) NOT NULL DEFAULT '1',
-  `coin` int(11) NOT NULL DEFAULT '10',
-  `material` int(11) NOT NULL DEFAULT '0',
-  `oven` int(11) NOT NULL DEFAULT '1',
-  `baked` int(11) NOT NULL
+  `coin` int(11) NOT NULL DEFAULT '30'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- 資料表的匯出資料 `player`
+-- Dumping data for table `player`
 --
 
-INSERT INTO `player` (`id`, `pwd`, `exp`, `level`, `coin`, `material`, `oven`, `baked`) VALUES
-('Peter', '555', 0, 1, 10, 0, 1, 0);
+INSERT INTO `player` (`pid`, `pname`, `pwd`, `exp`, `level`, `coin`) VALUES
+('111', 'a', '111', 0, 1, 1000000);
+
+-- --------------------------------------------------------
 
 --
--- 已匯出資料表的索引
+-- Table structure for table `playerbread`
+--
+
+CREATE TABLE IF NOT EXISTS `playerbread` (
+  `pid` int(11) NOT NULL,
+  `bid` int(11) NOT NULL,
+  `bnum` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `playermaterial`
+--
+
+CREATE TABLE IF NOT EXISTS `playermaterial` (
+  `pid` int(11) NOT NULL,
+  `bid` int(11) NOT NULL,
+  `bmnum` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- 資料表索引 `bread`
+-- Indexes for table `bread`
 --
 ALTER TABLE `bread`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`bid`);
 
 --
--- 資料表索引 `manager`
---
-ALTER TABLE `manager`
-  ADD PRIMARY KEY (`id`);
-
---
--- 資料表索引 `player`
+-- Indexes for table `player`
 --
 ALTER TABLE `player`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`pid`);
 
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `bread`
+--
+ALTER TABLE `bread`
+  MODIFY `bid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
