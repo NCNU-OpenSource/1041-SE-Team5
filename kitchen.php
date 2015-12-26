@@ -68,7 +68,7 @@ font-weight:bold;
                 </div>
                 <div class="col-md-9" id="main">
                     <div class="link1">
-                        <a href="bake.php"><img id="koven"src="img/koven.png" class="img-rounded" alt="Bake"></a>
+                        <a href="bake.php"><img id="koven"src="img/kioven.png" width="300" height="200" hspace="200" class="img-rounded" alt="Bake"></a>
                     </div>
                 </div>        
             </div>
