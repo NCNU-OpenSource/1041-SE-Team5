@@ -14,13 +14,13 @@ require("config.php");
 <style type="text/css">
 body {
 background-color:#DAA520;
-background-image:url(bread/back.jpg);
+background-image:url(img/back.jpg);
 background-opacity:0.1;
 background-position: 150px 300px;
 }
 #leftbar {
 background: linear-gradient(to right,#DEB887 40%,#FFDAB9);
-background-image:url(bread/12.jpg);
+background-image:url(img/12.jpg);
 background-repeat: no-repeat;
 padding:8px 0px 3px 10px;
 opacity:0.7;
@@ -44,14 +44,14 @@ top:60%;
 opacity:0.35;
 }
 button {
-background-image:url(bread/13.jpg);
+background-image:url(img/13.jpg);
 background-repeat:no-repeat;
 background-position:center;
 padding-left:1pc;
 color:#8B0000;
 }
 button:hover {
-background-image:url(bread/13.jpg);
+background-image:url(img/13.jpg);
 color:orange;
 font-weight:bold;
 }
@@ -74,16 +74,16 @@ font-weight:bold;
                 <div class="col-md-9" id="table">
                    <table align="center"  cellspacing="10" cellpadding="8">
 				   <thead><tr>
-				   <th>紅豆麵包<br/><img src="bread/1.png"width="200"height="150"/><br/>價錢:25元&nbsp;&nbsp;&nbsp;時間:2min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
-				   <th>牛奶土司<br/><img src="bread/2.png"width="200"height="150"/><br/>價錢:60元&nbsp;&nbsp;&nbsp;時間:10min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
-				   <th>牛角麵包<br/><img src="bread/3.png"width="200"height="150"/><br/>價錢:45元&nbsp;&nbsp;&nbsp;時間:4min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
-				   <th>杯子蛋糕<br/><img src="bread/4.png"width="200"height="150"/><br/>價錢:35元&nbsp;&nbsp;&nbsp;時間:8min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
+				   <th>紅豆麵包<br/><img src="img/1.png"width="200"height="150"/><br/>價錢:25元&nbsp;&nbsp;&nbsp;時間:2min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
+				   <th>牛奶土司<br/><img src="img/2.png"width="200"height="150"/><br/>價錢:60元&nbsp;&nbsp;&nbsp;時間:10min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
+				   <th>牛角麵包<br/><img src="img/3.png"width="200"height="150"/><br/>價錢:45元&nbsp;&nbsp;&nbsp;時間:4min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
+				   <th>杯子蛋糕<br/><img src="img/4.png"width="200"height="150"/><br/>價錢:35元&nbsp;&nbsp;&nbsp;時間:8min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
 				   </tr></thead>
 				   <thead><tr>
-				   <th>法國麵包<br/><img src="bread/5.png"width="200"height="150"/><br/>價錢:45元&nbsp;&nbsp;&nbsp;時間:5min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
-				   <th>甜甜圈<br/><img src="bread/6.png"width="200"height="150"/><br/>價錢:15元&nbsp;&nbsp;&nbsp;時間:2min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
-				   <th>燕麥吐司<br/><img src="bread/7.png"width="200"height="150"/><br/>價錢:80元&nbsp;&nbsp;&nbsp;時間:10min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
-				   <th>薑餅人<br/><img src="bread/8.png"width="200"height="150"/><br/>價錢:25元&nbsp;&nbsp;&nbsp;時間:5min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
+				   <th>法國麵包<br/><img src="img/5.png"width="200"height="150"/><br/>價錢:45元&nbsp;&nbsp;&nbsp;時間:5min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
+				   <th>甜甜圈<br/><img src="img/6.png"width="200"height="150"/><br/>價錢:15元&nbsp;&nbsp;&nbsp;時間:2min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
+				   <th>燕麥吐司<br/><img src="img/7.png"width="200"height="150"/><br/>價錢:80元&nbsp;&nbsp;&nbsp;時間:10min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
+				   <th>薑餅人<br/><img src="img/8.png"width="200"height="150"/><br/>價錢:25元&nbsp;&nbsp;&nbsp;時間:5min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
 				   </tr></thead>
 
 				   <thead><tr><th>交易金額:</th><th></th><th><button>交易</button></th></tr></thead>
@@ -102,10 +102,10 @@ font-weight:bold;
         </div>
     </div>
 	<div id="picture">
-		<p><img src="bread/chef.jpg"width="200"/ ></p>
+		<p><img src="img/chef.jpg"width="200"/ ></p>
 	</div>
 	<div id="picture2">
-		<p><img src="bread/chef2.jpg"width="250"/ ></p>
+		<p><img src="img/chef2.jpg"width="250"/ ></p>
 	</div>
 </div>
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
