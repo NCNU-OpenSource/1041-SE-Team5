@@ -12,7 +12,7 @@
 <style type="text/css">
 body {
 background-color:#DAA520;
-background-image:url(login1.png);
+background-image:url(login/login1.png);
 background-size:100% 100%;
 background-opacity:0.1;
 background-repeat: no-repeat;
@@ -41,11 +41,12 @@ if(isset( $_POST['id'])){
 	$passWord ="";
 }
 
-		$sql = "SELECT * FROM player WHERE id='" . $userName . "' AND pwd= '" . $passWord . "'";
+		$sql = "SELECT * FROM player WHERE pid='" . $userName . "' AND pwd= '" . $passWord . "'";
 		if($userName !="" && $passWord !=""){
 			if ($result = mysqli_query($conn,$sql)) {
 				if ($row=mysqli_fetch_array($result)) {
 					$_SESSION['uID'] = $row['id'];
+                    $_SESSION['pname'] = $row['pname'];
 					header("Location:kitchen.php");
 					//echo "<a href='02.list.php'>go</a>";
 					echo "Yes";
