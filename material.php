@@ -15,13 +15,13 @@ require("config.php");
 <style type="text/css">
 body {
 background-color:#DAA520;
-background-image:url(bread/back.jpg);
+background-image:url(img/back.jpg);
 background-opacity:0.1;
 background-position: 150px 300px;
 }
 #leftbar {
 background: linear-gradient(to right,#DEB887 40%,#FFDAB9);
-background-image:url(bread/12.jpg);
+background-image:url(img/12.jpg);
 background-repeat: no-repeat;
 padding:8px 0px 3px 10px;
 opacity:0.7;
@@ -34,14 +34,14 @@ top:350px;
 opacity:0.35;
 }
 button {
-background-image:url(bread/13.jpg);
+background-image:url(img/13.jpg);
 background-repeat:no-repeat;
 background-position:center;
 padding-left:1pc;
 color:#8B0000;
 }
 button:hover {
-background-image:url(bread/13.jpg);
+background-image:url(img/13.jpg);
 color:orange;
 font-weight:bold;
 }
@@ -63,16 +63,16 @@ font-weight:bold;
                     <table align="center"  cellspacing="10" cellpadding="5" >
                     <thead><tr>
 					 <br/><br/>
-                    <th width="200"height="150"align="Center">紅豆麵包<br/><img src="bread/1.jpg"width="200"height="150"/><br/>材料包：1<br/><br/><br/></th>
-                    <th width="200"height="150"align="Center">乳酪麵包<br/><img src="bread/2.jpg"width="200"height="150"/><br/>材料包：1<br/><br/><br/></th>
-                    <th width="200"height="150"align="Center">蔥花麵包<br/><img src="bread/3.jpg"width="200"height="150"/><br/>材料包：2<br/><br/><br/></th>
-                    <th width="200"height="150"align="Center">炸彈麵包<br/><img src="bread/4.jpg"width="200"height="150"/><br/>材料包：2<br/><br/><br/></th>
+                    <th width="200"height="150"align="Center">紅豆麵包<br/><img src="img/1.jpg"width="200"height="150"/><br/>材料包：1<br/><br/><br/></th>
+                    <th width="200"height="150"align="Center">乳酪麵包<br/><img src="img/2.jpg"width="200"height="150"/><br/>材料包：1<br/><br/><br/></th>
+                    <th width="200"height="150"align="Center">蔥花麵包<br/><img src="img/3.jpg"width="200"height="150"/><br/>材料包：2<br/><br/><br/></th>
+                    <th width="200"height="150"align="Center">炸彈麵包<br/><img src="img/4.jpg"width="200"height="150"/><br/>材料包：2<br/><br/><br/></th>
                     </tr></thead>
                     <thead><tr>
-                    <th width="200"height="150"align="Center">法國麵包<br/><img src="bread/5.jpg"width="200"height="150"/><br/>材料包：2<br/><br/><br/></th>
-                    <th width="200"height="150"align="Center">牛奶土司<br/><img src="bread/6.jpg"width="200"height="150"/><br/>材料包：3<br/><br/><br/></th>
-                    <th width="200"height="150"align="Center">葡萄吐司<br/><img src="bread/7.jpg"width="200"height="150"/><br/>材料包：3<br/><br/><br/></th>
-                    <th width="200"height="150"align="Center">燕麥吐司<br/><img src="bread/8.jpg"width="200"height="150"/><br/>材料包：3<br/><br/><br/></th>
+                    <th width="200"height="150"align="Center">法國麵包<br/><img src="img/5.jpg"width="200"height="150"/><br/>材料包：2<br/><br/><br/></th>
+                    <th width="200"height="150"align="Center">牛奶土司<br/><img src="img/6.jpg"width="200"height="150"/><br/>材料包：3<br/><br/><br/></th>
+                    <th width="200"height="150"align="Center">葡萄吐司<br/><img src="img/7.jpg"width="200"height="150"/><br/>材料包：3<br/><br/><br/></th>
+                    <th width="200"height="150"align="Center">燕麥吐司<br/><img src="img/8.jpg"width="200"height="150"/><br/>材料包：3<br/><br/><br/></th>
                     </tr></thead>
                     <thead><tr><th>庫存:</th><th></th><th>交易金額:</th><th></th></tr></thead>
                     </table>
@@ -89,7 +89,7 @@ font-weight:bold;
             </div>
         </div>
 	<div id="picture2">
-		<p><img src="bread/11.jpg"width="250"/ ></p>
+		<p><img src="img/11.jpg"width="250"/ ></p>
 	</div>
     </div>
 </div>
