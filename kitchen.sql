@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 25, 2015 at 09:58 PM
+-- Generation Time: Dec 27, 2015 at 10:53 PM
 -- Server version: 5.6.24
 -- PHP Version: 5.6.8
 
@@ -30,17 +30,19 @@ CREATE TABLE IF NOT EXISTS `bread` (
   `bid` int(11) NOT NULL,
   `bname` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `baketime` int(11) NOT NULL,
-  `m_cost` int(11) NOT NULL,
+  `m_num` int(11) NOT NULL,
   `sellmoney` int(11) NOT NULL,
-  `avallevel` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `avallevel` int(11) NOT NULL,
+  `bakeexp` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `bread`
 --
 
-INSERT INTO `bread` (`bid`, `bname`, `baketime`, `m_cost`, `sellmoney`, `avallevel`) VALUES
-(1, '甜甜圈', 120, 10, 15, 1);
+INSERT INTO `bread` (`bid`, `bname`, `baketime`, `m_num`, `sellmoney`, `avallevel`, `bakeexp`) VALUES
+(1, '甜甜圈', 120, 2, 15, 1, 5),
+(2, '紅豆麵包', 120, 3, 100, 2, 6);
 
 -- --------------------------------------------------------
 
@@ -53,8 +55,18 @@ CREATE TABLE IF NOT EXISTS `ovenplayer` (
   `pname` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `bid` int(11) NOT NULL,
   `btime` int(11) NOT NULL,
-  `status` int(11) NOT NULL DEFAULT '0'
+  `status` int(11) NOT NULL DEFAULT '4'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `ovenplayer`
+--
+
+INSERT INTO `ovenplayer` (`oid`, `pname`, `bid`, `btime`, `status`) VALUES
+(1, 'a', 0, 0, 0),
+(2, 'a', 0, 0, 0),
+(3, 'a', 0, 0, 3),
+(4, 'a', 0, 0, 3);
 
 -- --------------------------------------------------------
 
@@ -68,15 +80,16 @@ CREATE TABLE IF NOT EXISTS `player` (
   `pwd` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `exp` int(11) NOT NULL DEFAULT '0',
   `level` int(11) NOT NULL DEFAULT '1',
-  `coin` int(11) NOT NULL DEFAULT '30'
+  `coin` int(11) NOT NULL DEFAULT '30',
+  `material` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `player`
 --
 
-INSERT INTO `player` (`pid`, `pname`, `pwd`, `exp`, `level`, `coin`) VALUES
-('111', 'a', '111', 0, 1, 1000000);
+INSERT INTO `player` (`pid`, `pname`, `pwd`, `exp`, `level`, `coin`, `material`) VALUES
+('111', 'a', '111', 72, 40, 999000, 999952);
 
 -- --------------------------------------------------------
 
@@ -85,22 +98,19 @@ INSERT INTO `player` (`pid`, `pname`, `pwd`, `exp`, `level`, `coin`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `playerbread` (
-  `pid` int(11) NOT NULL,
+  `pbid` varchar(40) COLLATE utf8mb4_unicode_ci NOT NULL,
   `bid` int(11) NOT NULL,
+  `pname` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `bnum` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `playermaterial`
+-- Dumping data for table `playerbread`
 --
 
-CREATE TABLE IF NOT EXISTS `playermaterial` (
-  `pid` int(11) NOT NULL,
-  `bid` int(11) NOT NULL,
-  `bmnum` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+INSERT INTO `playerbread` (`pbid`, `bid`, `pname`, `bnum`) VALUES
+('a_1', 1, 'a', 3),
+('a_2', 2, 'a', 2);
 
 --
 -- Indexes for dumped tables
@@ -113,10 +123,22 @@ ALTER TABLE `bread`
   ADD PRIMARY KEY (`bid`);
 
 --
+-- Indexes for table `ovenplayer`
+--
+ALTER TABLE `ovenplayer`
+  ADD PRIMARY KEY (`oid`);
+
+--
 -- Indexes for table `player`
 --
 ALTER TABLE `player`
   ADD PRIMARY KEY (`pid`);
+
+--
+-- Indexes for table `playerbread`
+--
+ALTER TABLE `playerbread`
+  ADD PRIMARY KEY (`pbid`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -126,7 +148,7 @@ ALTER TABLE `player`
 -- AUTO_INCREMENT for table `bread`
 --
 ALTER TABLE `bread`
-  MODIFY `bid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `bid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
