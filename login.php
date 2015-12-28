@@ -70,12 +70,12 @@ if(isset( $_POST['id'])){
 <form method="post" action="regist.php">
 User Name: <input type="text" name="id"><br />
 Password : <input type="password" name="pwd"><br />
-<input type="image" value="Log in" src="login/regist.jpg" >
+<input type="image" value="Log in" src="img/regist.jpg" >
 </form>
 <form method="post" action="login.php">
 User Name: <input type="text" name="id"><br />
 Password : <input type="password" name="pwd"><br />
-<input type="image" value="Log in" src="login/login.png" >
+<input type="image" value="Log in" src="img/login.png" >
 </form>
 </div>
 
