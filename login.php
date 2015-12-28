@@ -12,7 +12,7 @@
 <style type="text/css">
 body {
 background-color:#DAA520;
-background-image:url(login/login1.png);
+background-image:url(img/login1.png);
 background-size:100% 100%;
 background-opacity:0.1;
 background-repeat: no-repeat;
