@@ -68,12 +68,13 @@ if(isset( $_POST['id'])){
 
 <div style="position: absolute;bottom: 0;left:100px">
 <form method="post" action="regist.php">
-User Name: <input type="text" name="id"><br />
+帳號: <input type="text" name="id"><br />
+User Name: <input type="text" name="pname"><br />
 Password : <input type="password" name="pwd"><br />
 <input type="image" value="Log in" src="img/regist.jpg" >
 </form>
 <form method="post" action="login.php">
-User Name: <input type="text" name="id"><br />
+帳號: <input type="text" name="id"><br />
 Password : <input type="password" name="pwd"><br />
 <input type="image" value="Log in" src="img/login.png" >
 </form>
