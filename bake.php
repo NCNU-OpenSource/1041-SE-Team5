@@ -24,19 +24,20 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/bake.css">
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"
-        src="countdown.min.js">
-    </script>
+    <script src="js/countdown.min.js"></script>
     <script text/javascript>
     function start(){
         <?php for($i=1;$i<=$rsa['r'];$i++){?>
             new Countdown({
                 selector: '.timer<?php echo $oid[$i-1];?>',
-                msgPattern: "{seconds}",
+                msgBefore: "",
+                msgAfter: "<?php echo '烤好了!';
+                            $sqlyy = "update ovenplayer set status=2 btime=0 where oid='".$oid[$i-1]."' and pname='$pname'";
+                            mysqli_query($conn,$sqlyy);
+                            ?>",
+                msgPattern: "{seconds} s",
                 dateStart: new Date(),
                 dateEnd: new Date('<?php echo date("M d, Y H:i:s",$endtime[$i-1])?>'),
-                msgBefore: "",
-                msgAfter: new done(<?php echo $oid[$i-1];?>,<?php echo $bid[$i-1];?>),
                 onStart: function() {
                     console.log('start');
                 },
@@ -51,23 +52,31 @@
         $sqlb = "select * from ovenplayer  where pname='$pname' order by oid";
         $resultstb=mysqli_query($conn,$sqlb);
         while($rsc=mysqli_fetch_array($resultstb)){?>
+            var i = <?php echo $rsc['oid']?>;
+            var j = <?php echo $rsc['bid']?>;
             var oven_now = '<?php echo $rsc['oid'] ?>';
             var target = "oven"+oven_now+"_b";
             <?php if($rsc['status']=='1'){ ?>
                 $("#"+target).attr('disabled',true);
                 $("#"+target).css("background-image", "url('img/oven3.png')");
+                start();
             <?php } 
             else if($rsc['status']=='2'){ ?>
-                $("#"+target).attr('disabled',true);
-                $("#"+target).css("background-image", "url('img/oven5.png')");
-            <?php } 
-            else if($rsc['status']=='3'){ ?>
-                var targeturl="unlockoven.php?oid="+oven_now;
-                var targeton="self.location.href='"+targeturl+"'";
+                var targeturl1="bakedone.php?oid="+i+"&bid="+j;
+                var targeton1="self.location.href='"+targeturl1+"'";
                 $("#"+target).attr('disabled',false);
                 $("#"+target).attr('data-toggle',false);
                 $("#"+target).attr('data-target',false);
-                $("#"+target).attr('Onclick',""+targeton+"");
+                $("#"+target).attr('Onclick',""+targeton1+"");
+                $("#"+target).css("background-image", "url('img/oven5.png')");
+            <?php }  
+            else if($rsc['status']=='3'){ ?> 
+                var targeturl2="unlockoven.php?oid="+oven_now;
+                var targeton2="self.location.href='"+targeturl2+"'"; 
+                $("#"+target).attr('disabled',false);
+                $("#"+target).attr('data-toggle',false);
+                $("#"+target).attr('data-target',false);
+                $("#"+target).attr('Onclick',""+targeton2+"");
                 $("#"+target).attr('disabled',false);
                 $("#"+target).css("background-image", "url('img/oven4.png')");
             <?php } 
@@ -81,21 +90,21 @@
             <?php } ?>
         <?php }; ?>
     };
-    function done(i,j){
-        var targetdone="oven"+i+"_b";
-        var targeturl="bakedone.php?oid="+i+"&bid="+j;
-        var targeton="self.location.href='"+targeturl+"'";
-        //alert(targeton);
-        $("#"+targetdone).attr('disabled',false);
-        $("#"+targetdone).attr('data-toggle',false);
-        $("#"+targetdone).attr('data-target',false);
-        $("#"+targetdone).attr('Onclick',""+targeton+"");
-        $("#"+targetdone).css("background-image", "url('img/oven5.png')");
-    };
-    window.onload=function(){
-        statuscheck();
-        start();
+    function addLoadEvent(func) {
+      var oldonload = window.onload;
+      if (typeof window.onload != 'function') {
+        window.onload = func;
+      } else {
+        window.onload = function() {
+          if (oldonload) {
+            oldonload();
+          }
+          func();
+        }
+      }
     }
+    addLoadEvent(statuscheck);
+    addLoadEvent(start);
     </script>
 <title>快樂廚房</title>
 </head>
@@ -122,8 +131,7 @@
                     <div class="container-fluid" id="main_in">
                         <div class="row">
                             <div class="col-md-6" id="oven1">
-                                <button type="button" id="oven1_b" class="oven btn btn-link btn-block" Onclick="bakedone.php" data-toggle="modal" data-target="#put_material1"></button>
-                                <?php echo "<span id=\"upper\" class=\"timer1\"></span>";?>
+                                <button type="button" id="oven1_b" class="oven btn btn-link btn-block" data-toggle="modal" data-target="#put_material1"><?php echo "<span id=\"upper\" class=\"timer1 label label-info\"></span>";?></button>
                                 <div class="modal fade bs-example-modal-sm" id="put_material1" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                                   <div class="modal-dialog modal-sm">
                                     <div class="modal-content">
@@ -146,8 +154,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6" id="oven2">
-                                <button type="button" id="oven2_b" class="oven btn btn-link btn-block" data-toggle="modal" data-target="#put_material2"></button>
-                                <?php echo "<span id=\"upper\" class=\"timer2\"></span>";?>
+                                <button type="button" id="oven2_b" class="oven btn btn-link btn-block" data-toggle="modal" data-target="#put_material2"><?php echo "<span id=\"upper\" class=\"timer2 label label-info\"></span>";?></button>
                                 <div class="modal fade bs-example-modal-sm" id="put_material2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                                   <div class="modal-dialog modal-sm">
                                     <div class="modal-content">
@@ -172,8 +179,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6" id="oven3">
-                                <button type="button" id="oven3_b" class="oven btn btn-link btn-block" data-toggle="modal" data-target="#put_material3"></button>
-                                <?php echo "<span id=\"upper\" class=\"timer3\"></span>";?>
+                                <button type="button" id="oven3_b" class="oven btn btn-link btn-block" data-toggle="modal" data-target="#put_material3"><?php echo "<span id=\"upper\" class=\"timer3 label label-info\"></span>";?></button>
                                 <div class="modal fade bs-example-modal-sm" id="put_material3" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                                   <div class="modal-dialog modal-sm">
                                     <div class="modal-content">
@@ -196,8 +202,7 @@
                                 </div>
                             </div>                           
                             <div class="col-md-6" id="oven4">
-                                <button type="button" id="oven4_b" class="oven btn btn-link btn-block" data-toggle="modal" data-target="#put_material4"></button>
-                                <?php echo "<span id=\"upper\" class=\"timer4\"></span>";?>
+                                <button type="button" id="oven4_b" class="oven btn btn-link btn-block" data-toggle="modal" data-target="#put_material4"><?php echo "<span id=\"upper\" class=\"timer4 label label-info\"></span>";?></button>
                                 <div class="modal fade bs-example-modal-sm" id="put_material4" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                                   <div class="modal-dialog modal-sm">
                                     <div class="modal-content">
