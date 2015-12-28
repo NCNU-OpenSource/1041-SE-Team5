@@ -1,6 +1,4 @@
-<?php
-require("config.php");
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,16 +72,16 @@ font-weight:bold;
                 <div class="col-md-9" id="table">
                    <table align="center"  cellspacing="10" cellpadding="8">
 				   <thead><tr>
-				   <th>紅豆麵包<br/><img src="img/1.png"width="200"height="150"/><br/>價錢:25元&nbsp;&nbsp;&nbsp;時間:2min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
-				   <th>牛奶土司<br/><img src="img/2.png"width="200"height="150"/><br/>價錢:60元&nbsp;&nbsp;&nbsp;時間:10min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
-				   <th>牛角麵包<br/><img src="img/3.png"width="200"height="150"/><br/>價錢:45元&nbsp;&nbsp;&nbsp;時間:4min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
-				   <th>杯子蛋糕<br/><img src="img/4.png"width="200"height="150"/><br/>價錢:35元&nbsp;&nbsp;&nbsp;時間:8min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
+				   <th>薑餅人<br/><img src="img/8.png"width="200"height="150"/><br/>價錢:15元&nbsp;&nbsp;&nbsp;時間:1min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
+				   <th>甜甜圈<br/><img src="img/6.png"width="200"height="150"/><br/>價錢:20元&nbsp;&nbsp;&nbsp;時間:2min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
+				   <th>紅豆麵包<br/><img src="img/1.png"width="200"height="150"/><br/>價錢:25元&nbsp;&nbsp;&nbsp;時間:3min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
+				   <th>杯子蛋糕<br/><img src="img/4.png"width="200"height="150"/><br/>價錢:30元&nbsp;&nbsp;&nbsp;時間:3min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
 				   </tr></thead>
 				   <thead><tr>
-				   <th>法國麵包<br/><img src="img/5.png"width="200"height="150"/><br/>價錢:45元&nbsp;&nbsp;&nbsp;時間:5min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
-				   <th>甜甜圈<br/><img src="img/6.png"width="200"height="150"/><br/>價錢:15元&nbsp;&nbsp;&nbsp;時間:2min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
-				   <th>燕麥吐司<br/><img src="img/7.png"width="200"height="150"/><br/>價錢:80元&nbsp;&nbsp;&nbsp;時間:10min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
-				   <th>薑餅人<br/><img src="img/8.png"width="200"height="150"/><br/>價錢:25元&nbsp;&nbsp;&nbsp;時間:5min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
+				   <th>法國麵包<br/><img src="img/5.png"width="200"height="150"/><br/>價錢:40元&nbsp;&nbsp;&nbsp;時間:4min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
+				   <th>牛角麵包<br/><img src="img/3.png"width="200"height="150"/><br/>價錢:45元&nbsp;&nbsp;&nbsp;時間:5min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
+				   <th>牛奶吐司<br/><img src="img/2.png"width="200"height="150"/><br/>價錢:50元&nbsp;&nbsp;&nbsp;時間:6min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
+				   <th>燕麥吐司<br/><img src="img/7.png"width="200"height="150"/><br/>價錢:55元&nbsp;&nbsp;&nbsp;時間:7min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
 				   </tr></thead>
 
 				   <thead><tr><th>交易金額:</th><th></th><th><button>交易</button></th></tr></thead>
