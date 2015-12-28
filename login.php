@@ -45,11 +45,11 @@ if(isset( $_POST['id'])){
 		if($userName !="" && $passWord !=""){
 			if ($result = mysqli_query($conn,$sql)) {
 				if ($row=mysqli_fetch_array($result)) {
-					$_SESSION['uID'] = $row['id'];
+					$_SESSION['uID'] = $row['pid'];
                     $_SESSION['pname'] = $row['pname'];
-					header("Location:kitchen.php");
-					//echo "<a href='02.list.php'>go</a>";
+					//echo "<a href='kitchen.php'>go</a>";
 					echo "Yes";
+					header("Location:kitchen.php");
 					exit(0);
 				} 
 				else
@@ -70,12 +70,12 @@ if(isset( $_POST['id'])){
 <form method="post" action="regist.php">
 User Name: <input type="text" name="id"><br />
 Password : <input type="password" name="pwd"><br />
-<input type="image" value="Log in" src="regist.jpg" >
+<input type="image" value="Log in" src="login/regist.jpg" >
 </form>
 <form method="post" action="login.php">
 User Name: <input type="text" name="id"><br />
 Password : <input type="password" name="pwd"><br />
-<input type="image" value="Log in" src="login.png" >
+<input type="image" value="Log in" src="login/login.png" >
 </form>
 </div>
 
