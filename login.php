@@ -71,7 +71,7 @@ if(isset( $_POST['id'])){
 帳號: <input type="text" name="id"><br />
 User Name: <input type="text" name="pname"><br />
 Password : <input type="password" name="pwd"><br />
-<input type="image" value="Log in" src="img/regist.jpg" >
+<input type="image" value="Log in" src="img/register.png" >
 </form>
 <form method="post" action="login.php">
 帳號: <input type="text" name="id"><br />
