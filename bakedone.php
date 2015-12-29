@@ -6,7 +6,7 @@ $a=$_GET['oid'];
 $b=$_GET['bid'];
 $pbid=$id.'_'.$b;
 
-$sql = "update ovenplayer set status=0 , bid=0 , btime=0 where oid='$a' and pname='$id'";
+$sql = "update ovenplayer set status=0 , bid=0 where oid='$a' and pname='$id'";
 mysqli_query($conn,$sql);
 
 $sql2 = "INSERT INTO playerbread (pbid, bid, pname, bnum) VALUES ('$pbid', '$b', '$id', '1') ON DUPLICATE KEY UPDATE bnum = bnum + 1";

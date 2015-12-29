@@ -15,8 +15,11 @@ html, body{
 }
 #upper{
     position:absolute;
+    right:0px;
+    top:0px;
     font-size:25px;
-    color:#FFB6C1;
+    color:black;
+    z-index:5;
 }
 #column{
 	font-size: 20px;
@@ -55,6 +58,7 @@ button{
     height:100%;
     margin-bottom:5%;
     padding-top:5%;
+    z-index:0;
 }
 #leftbar{
     background: linear-gradient(to right,#DEB887 40%,#FFDAB9);
