@@ -177,7 +177,7 @@ font-weight:bold;
 				   &nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
 				   </tr></thead>
 
-				   <thead><tr><th><img src="img/15.jpg"width="25"height="25"/>交易金額:</th><th></th><th><button>交易</button></th></tr></thead>
+				   <thead><tr><th><img src="img/15.jpg"width="30"height="30"/>交易金額:</th><th></th><th><button>交易</button></th></tr></thead>
                    <br/><br/>
 				   </table>
          
