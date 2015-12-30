@@ -1,4 +1,7 @@
-
+<?php
+    include"config.php";
+    $pname=$_SESSION['pname'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,28 +66,118 @@ font-weight:bold;
         <div class="col-md-12" id="section1">
             <div class="row no-gutter" id="section1-1">
                 <div class="col-md-3" id="leftbar">
-				    <p></p>
-                    <p>玩家名稱：<br/>
-                    經驗值：<br/>
-                    等級：<br/>
-					金幣：</p><br/><br/><br/>
+                    <?php
+                        $sql1 = "select  * from player  where pname='$pname'";
+                        $results1=mysqli_query($conn,$sql1);
+                        if($rows=mysqli_fetch_array($results1)){
+                            echo"<div id=\"column\">",
+                                "玩家名稱：".$rows["pname"]."</br>",
+                                "等級:".$rows["level"]."</br>",
+                                "金幣:".$rows["coin"]."</br>",
+                                "經驗值：".$rows["exp"]."</br>",
+                                "材料包:".$rows["material"]."個</br></br></div>";
+                        }
+                    ?>
                 </div>
                 <div class="col-md-9" id="table">
                    <table align="center"  cellspacing="10" cellpadding="8">
 				   <thead><tr>
-				   <th>薑餅人<br/><img src="img/8.png"width="200"height="150"/><br/>價錢:15元&nbsp;&nbsp;&nbsp;時間:1min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
-				   <th>甜甜圈<br/><img src="img/6.png"width="200"height="150"/><br/>價錢:20元&nbsp;&nbsp;&nbsp;時間:2min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
-				   <th>紅豆麵包<br/><img src="img/1.png"width="200"height="150"/><br/>價錢:25元&nbsp;&nbsp;&nbsp;時間:3min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
-				   <th>杯子蛋糕<br/><img src="img/4.png"width="200"height="150"/><br/>價錢:30元&nbsp;&nbsp;&nbsp;時間:3min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
+				   <th>薑餅人<br/><img src="img/8.png"width="200"height="150"/><br/>價錢:15元&nbsp;&nbsp;&nbsp;時間:1min<br/>
+				   <?php
+				   $sqlb = "select * from playerbread where pname='$pname' and bid=1 ";
+				   $results=mysqli_query($conn,$sqlb);
+				   if($rows=mysqli_fetch_array($results)){
+						   echo "庫存: ".$rows["bnum"]."個 ";
+					   }
+				   else echo "庫存:0個 ";
+				   ?>
+				   &nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
+				   <th>甜甜圈<br/><img src="img/6.png"width="200"height="150"/><br/>價錢:20元&nbsp;&nbsp;&nbsp;時間:2min<br/>
+				   <?php
+				   $sqlb = "select * from playerbread where pname='$pname' and bid=2 ";
+				   $results=mysqli_query($conn,$sqlb);
+				   if($rows=mysqli_fetch_array($results)){
+						   echo "庫存: ".$rows["bnum"]."個 ";
+					   }
+				   else echo "庫存:0個 ";
+	              
+				   ?>
+				   &nbsp;&nbsp;&nbsp; 
+				   <script language="javascript">
+				   function addbid2() {
+					   <?php
+					   $sqladd = "update playerbread set bnum=bnum+1 where pname=$pname and bid=2;";
+					   $results=mysqli_query($conn,$sqladd);
+					   ?>
+				   }
+                   </script>
+				   數量:<br/><button onclick="addbid2()">+</button><button onclick="minusbid2()">-</button><br/></th>
+				   <th>紅豆麵包<br/><img src="img/1.png"width="200"height="150"/><br/>價錢:25元&nbsp;&nbsp;&nbsp;時間:3min<br/>
+				   <?php
+				   $sqlb = "select * from playerbread where pname='$pname' and bid=3 ";
+				   $results=mysqli_query($conn,$sqlb);
+				   if($rows=mysqli_fetch_array($results)){
+						   echo "庫存: ".$rows["bnum"]."個 ";
+					   }
+				   else echo "庫存:0個 ";
+				   ?>
+				   &nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
+				   <th>杯子蛋糕<br/><img src="img/4.png"width="200"height="150"/><br/>價錢:30元&nbsp;&nbsp;&nbsp;時間:3min<br/>
+				   <?php
+				   $sqlb = "select * from playerbread where pname='$pname' and bid=4 ";
+				   $results=mysqli_query($conn,$sqlb);
+				   if($rows=mysqli_fetch_array($results)){
+						   echo "庫存: ".$rows["bnum"]."個 ";
+					   }
+				   else echo "庫存 0個 ";
+					 
+				   ?>
+				   &nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
 				   </tr></thead>
 				   <thead><tr>
-				   <th>法國麵包<br/><img src="img/5.png"width="200"height="150"/><br/>價錢:40元&nbsp;&nbsp;&nbsp;時間:4min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
-				   <th>牛角麵包<br/><img src="img/3.png"width="200"height="150"/><br/>價錢:45元&nbsp;&nbsp;&nbsp;時間:5min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
-				   <th>牛奶吐司<br/><img src="img/2.png"width="200"height="150"/><br/>價錢:50元&nbsp;&nbsp;&nbsp;時間:6min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
-				   <th>燕麥吐司<br/><img src="img/7.png"width="200"height="150"/><br/>價錢:55元&nbsp;&nbsp;&nbsp;時間:7min<br/>庫存:10個&nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
+				   <th>法國麵包<br/><img src="img/5.png"width="200"height="150"/><br/>價錢:40元&nbsp;&nbsp;&nbsp;時間:4min<br/>
+				   <?php
+				   $sqlb = "select * from playerbread where pname='$pname' and bid=5 ";
+				   $results=mysqli_query($conn,$sqlb);
+				   if($rows=mysqli_fetch_array($results)){
+						   echo "庫存: ".$rows["bnum"]."個 ";
+					   }
+				   else echo "庫存 0個 ";
+				   ?>
+				   &nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
+				   <th>牛角麵包<br/><img src="img/3.png"width="200"height="150"/><br/>價錢:45元&nbsp;&nbsp;&nbsp;時間:5min<br/>
+				   <?php
+				   $sqlb = "select * from playerbread where pname='$pname' and bid=6 ";
+				   $results=mysqli_query($conn,$sqlb);
+				   if($rows=mysqli_fetch_array($results)){
+						   echo "庫存: ".$rows["bnum"]."個 ";
+					   }
+				   else echo "庫存 0個 ";
+				   ?>
+				   &nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
+				   <th>牛奶吐司<br/><img src="img/2.png"width="200"height="150"/><br/>價錢:50元&nbsp;&nbsp;&nbsp;時間:6min<br/>
+				   <?php
+				   $sqlb = "select * from playerbread where pname='$pname' and bid=7 ";
+				   $results=mysqli_query($conn,$sqlb);
+				   if($rows=mysqli_fetch_array($results)){
+						   echo "庫存: ".$rows["bnum"]."個 ";
+					   }
+				   else echo "庫存 0個 ";
+				   ?>
+				   &nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
+				   <th>燕麥吐司<br/><img src="img/7.png"width="200"height="150"/><br/>價錢:55元&nbsp;&nbsp;&nbsp;時間:7min<br/>
+				   <?php
+				   $sqlb = "select * from playerbread where pname='$pname' and bid=8 ";
+				   $results=mysqli_query($conn,$sqlb);
+				   if($rows=mysqli_fetch_array($results)){
+						   echo "庫存: ".$rows["bnum"]."個 ";
+					   }
+				   else echo "庫存 0個 ";
+				   ?>
+				   &nbsp;&nbsp;&nbsp;數量:<br/><button>+</button><button>-</button><br/></th>
 				   </tr></thead>
 
-				   <thead><tr><th>交易金額:</th><th></th><th><button>交易</button></th></tr></thead>
+				   <thead><tr><th><img src="img/15.jpg"width="25"height="25"/>交易金額:</th><th></th><th><button>交易</button></th></tr></thead>
                    <br/><br/>
 				   </table>
          
