@@ -1,3 +1,7 @@
+<?php
+    include"config.php";
+    $pname=$_SESSION['pname'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +19,7 @@ background-color:#DAA520;
 background-image:url(img/back.jpg);
 background-opacity:0.1;
 background-position: 150px 300px;
+font-size:12pt;
 }
 #leftbar {
 background: linear-gradient(to right,#DEB887 40%,#FFDAB9);
@@ -34,13 +39,16 @@ button {
 background-image:url(img/13.jpg);
 background-repeat:no-repeat;
 background-position:center;
-padding-left:1pc;
 color:#8B0000;
 }
 button:hover {
 background-image:url(img/13.jpg);
 color:orange;
 font-weight:bold;
+}
+#button1
+{
+background-image:url(img/back.jpg);
 }
 </style>
 </head>
@@ -50,28 +58,55 @@ font-weight:bold;
         <div class="col-md-12" id="section1">
             <div class="row no-gutter" id="section1-1">
                 <div class="col-md-3" id="leftbar">
-				    <p>
-                    <p>玩家名稱：<br/>
-                    經驗值：<br/>
-                    等級：<br/>
-                    金幣：</p><br/><br/><br/>
+				    <?php
+                        $sql1 = "select  * from player  where pname='$pname'";
+                        $results1=mysqli_query($conn,$sql1);
+                        if($rows=mysqli_fetch_array($results1)){
+                            echo"<div id=\"column\">",
+                                "玩家名稱：".$rows["pname"]."</br>",
+                                "等級:".$rows["level"]."</br>",
+                                "金幣:".$rows["coin"]."</br>",
+                                "經驗值：".$rows["exp"]."</br>",
+                                "材料包:".$rows["material"]."個</br></br></br></div>";
+                        }
+                    ?>
                 </div>
                 <div class="col-md-9" id="table">
                     <table align="center"  cellspacing="10" cellpadding="5" >
-                    <thead><tr>
-					 <br/><br/>
-                    <th width="200"height="150"align="Center">薑餅人<br/><img src="img/8.png"width="200"height="150"/><br/>材料包：1<br/><br/><br/></th>
-                    <th width="200"height="150"align="Center">甜甜圈<br/><img src="img/6.png"width="200"height="150"/><br/>材料包：1<br/><br/><br/></th>
-                    <th width="200"height="150"align="Center">紅豆麵包<br/><img src="img/1.png"width="200"height="150"/><br/>材料包：2<br/><br/><br/></th>
-                    <th width="200"height="150"align="Center">杯子蛋糕<br/><img src="img/4.png"width="200"height="150"/><br/>材料包：2<br/><br/><br/></th>
+                    <thead><tr><br/>
+                    <th width="200"height="150"align="Center">薑餅人<br/><button type="button" id="button1" style="width:200px; height:150px; font-size:15px"><img src="img/8.png"width="175px"height="120px"/></button><br/>材料包：1<br/><br/><br/></th>
+                    <th width="200"height="150"align="Center">甜甜圈<br/><button type="button" id="button1" style="width:200px; height:150px; font-size:15px"><img src="img/6.png"width="175"height="150"/></button><br/>材料包：1<br/><br/><br/></th>
+                    <th width="200"height="150"align="Center">紅豆麵包<br/><button type="button" id="button1" style="width:200px; height:150px; font-size:15px"><img src="img/1.png"width="175"height="150"/></button><br/>材料包：2<br/><br/><br/></th>
+                    <th width="200"height="150"align="Center">杯子蛋糕<br/><button type="button" id="button1" style="width:200px; height:150px; font-size:15px"><img src="img/4.png"width="175"height="150"/></button><br/>材料包：2<br/><br/><br/></th>
                     </tr></thead>
                     <thead><tr>
-                    <th width="200"height="150"align="Center">法國麵包<br/><img src="img/5.png"width="200"height="150"/><br/>材料包：2<br/><br/><br/></th>
-                    <th width="200"height="150"align="Center">牛角麵包<br/><img src="img/3.png"width="200"height="150"/><br/>材料包：3<br/><br/><br/></th>
-                    <th width="200"height="150"align="Center">牛奶吐司<br/><img src="img/2.png"width="200"height="150"/><br/>材料包：3<br/><br/><br/></th>
-                    <th width="200"height="150"align="Center">燕麥吐司<br/><img src="img/7.png"width="200"height="150"/><br/>材料包：3<br/><br/><br/></th>
+                    <th width="200"height="150"align="Center">法國麵包<br/><button type="button" id="button1" style="width:200px; height:150px; font-size:15px"><img src="img/5.png"width="175"height="150"/></button><br/>材料包：2<br/><br/><br/></th>
+                    <th width="200"height="150"align="Center">牛角麵包<br/><button type="button" id="button1" style="width:200px; height:150px; font-size:15px"><img src="img/3.png"width="175"height="150"/></button><br/>材料包：3<br/><br/><br/></th>
+                    <th width="200"height="150"align="Center">牛奶吐司<br/><button type="button" id="button1" style="width:200px; height:150px; font-size:15px"><img src="img/2.png"width="175"height="150"/></button><br/>材料包：3<br/><br/><br/></th>
+                    <th width="200"height="150"align="Center">燕麥吐司<br/><button type="button" id="button1" style="width:200px; height:150px; font-size:15px"><img src="img/7.png"width="175"height="150"/></button><br/>材料包：3<br/><br/><br/></th>
                     </tr></thead>
-                    <thead><tr><th>庫存:</th><th></th><th>交易金額:</th><th></th></tr></thead>
+                    <thead><tr>
+                    <th>
+                    <?php
+                        $sql1 = "select  * from player  where pname='$pname'";
+                        $results1=mysqli_query($conn,$sql1);
+                        if($rows=mysqli_fetch_array($results1)){
+                            echo"<div id=\"column\">",
+                                "材料包庫存:   ".$rows["material"]."個</br></br></br></div>";
+                        }
+                    ?>
+                    </th>
+                    <th>
+                    <?php
+                        $sql1 = "select  * from player  where pname='$pname'";
+                        $results1=mysqli_query($conn,$sql1);
+                        if($rows=mysqli_fetch_array($results1)){
+                            echo"<div id=\"column\">",
+                                "金幣:".$rows["coin"]."個</br></br></br></div>";
+                        }
+                    ?>
+                    </th>
+                    </thead>
                     </table>
                     <br/>
                 </div>        
