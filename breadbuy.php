@@ -1,0 +1,68 @@
+<?php
+include"config.php";
+$pname=$_SESSION['pname'];
+   /*GET傳來的值*/
+$sql = "select * from playerbread where pname=$pname;";
+
+$results=mysqli_query($conn,$sql);
+$sqlcoin = "select * from player where pname=$pname;";
+
+$results=mysqli_query($conn,$sqlcoin);
+$id=(int)$_GET["id"];
+
+
+    if($id==1){
+        $sql1 = "update playerbread set bnum=bnum-1  where pname='$pname' and bid=1";
+        mysqli_query($conn,$sql1) or die("MySQL query error"); 
+        $sqlc = "update player set coin=coin+15  where pname='$pname' ";
+        mysqli_query($conn,$sqlc) or die("MySQL query error"); 		
+    }
+						   
+    if($id==2){
+        $sql2 = "update playerbread set bnum=bnum-1 where pname='$pname' and bid=2 ";
+        mysqli_query($conn,$sql2) or die("MySQL query error");
+        $sqlc = "update player set coin=coin+20  where pname='$pname' ";
+        mysqli_query($conn,$sqlc) or die("MySQL query error"); 		
+    }
+    if($id==3){
+        $sql3 = "update playerbread set bnum=bnum-1 where pname='$pname' and bid=3 ";
+        mysqli_query($conn,$sql3) or die("MySQL query error");
+        $sqlc = "update player set coin=coin+25  where pname='$pname' ";
+        mysqli_query($conn,$sqlc) or die("MySQL query error"); 		
+    }
+    if($id==4){
+        $sql4 = "update playerbread set bnum=bnum-1 where pname='$pname' and bid=4 ";
+        mysqli_query($conn,$sql4) or die("MySQL query error");
+        $sqlc = "update player set coin=coin+30  where pname='$pname' ";
+        mysqli_query($conn,$sqlc) or die("MySQL query error"); 		
+    }
+    if($id==5){
+        $sql5 = "update playerbread set bnum=bnum-1 where pname='$pname' and bid=5 ";
+        mysqli_query($conn,$sql5) or die("MySQL query error");
+        $sqlc = "update player set coin=coin+40  where pname='$pname' ";
+        mysqli_query($conn,$sqlc) or die("MySQL query error"); 		
+    }
+    if($id==6){
+        $sql6 = "update playerbread set bnum=bnum-1 where pname='$pname' and bid=6 ";
+        mysqli_query($conn,$sql6) or die("MySQL query error");
+        $sqlc = "update player set coin=coin+45  where pname='$pname' ";
+        mysqli_query($conn,$sqlc) or die("MySQL query error"); 		
+    }
+    if($id==7){
+        $sql7 = "update playerbread set bnum=bnum-1 where pname='$pname' and bid=7 ";
+        mysqli_query($conn,$sql7) or die("MySQL query error");
+        $sqlc = "update player set coin=coin+50  where pname='$pname' ";
+        mysqli_query($conn,$sqlc) or die("MySQL query error"); 		
+    }
+    if($id==8){
+        $sql8 = "update playerbread set bnum=bnum-1 where pname='$pname' and bid=8 ";
+        mysqli_query($conn,$sql8) or die("MySQL query error");
+        $sqlc = "update player set coin=coin+55  where pname='$pname' ";
+        mysqli_query($conn,$sqlc) or die("MySQL query error"); 		
+    }
+
+	
+
+header("Location:bread.php");
+?>
+
