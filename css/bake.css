@@ -9,7 +9,7 @@ html, body{
     height:100%;
     width:100%;
     background-color:#DAA520;
-    background-image:url('../bread/back.jpg');
+    background-image:url('../img/back.jpg');
     background-opacity:0.1;
     background-position: 150px 300px;
 }
@@ -46,7 +46,7 @@ button{
     height:40px;
 }
 #main{ 
-    background:top repeat  url('../material/back.jpg');
+    background:top repeat  url('../img/24.jpg');
     position:relative;
     height:0;
     padding-bottom:40%;
@@ -62,7 +62,7 @@ button{
 }
 #leftbar{
     background: linear-gradient(to right,#DEB887 40%,#FFDAB9);
-    background-image:url('../bread/12.jpg');
+    background-image:url('../img/12.jpg');
     background-repeat: no-repeat;
     background-size:283px 178px;
     opacity:0.7;
@@ -93,8 +93,8 @@ button{
 }
 #picture {
     position:absolute;
-    left:5%;
-    top:30%;
+    left:3%;
+    top:34%;
     opacity:0.35;
 }
 #picture2 {
@@ -104,13 +104,14 @@ button{
     opacity:0.35;
 }
 .buttons {
-    background-image:url('../bread/13.jpg');
+    background-image:url('../img/13.jpg');
     background-repeat:no-repeat;
     background-position:center;
+	padding-left:1pc;
     color:#8B0000;
 }
 .buttons:hover {
-    background-image:url('../bread/13.jpg');
+    background-image:url('../img/13.jpg');
     color:orange;
     font-weight:bold;
 }

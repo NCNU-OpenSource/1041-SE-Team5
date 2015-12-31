@@ -40,9 +40,9 @@ opacity:0.35;
 }
 #picture2 {
 position:absolute;
-left:5%;
-top:60%;
-opacity:0.35;
+left:2%;
+top:45%;
+opacity:0.25;
 }
 button {
 background-image:url(img/13.jpg);
@@ -85,8 +85,8 @@ font-weight:bold;
             </div>
         </div>
     </div>
-	<div id="picture">
-		<p><img src="img/20.jpg"width="200"/ ></p>
+	<div id="picture2">
+		<p><img src="img/m3.gif"width="250"/ ></p>
 	</div>
 </div>
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>

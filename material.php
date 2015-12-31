@@ -29,10 +29,16 @@ padding:8px 0px 3px 10px;
 opacity:0.7;
 letter-spacing: 4pt;
 }
+#picture {
+position:absolute;
+left:10%;
+top:37%;
+opacity:0.35;
+}
 #picture2 {
 position:absolute;
-left:30px;
-top:350px;
+left:1%;
+top:34%;
 opacity:0.35;
 }
 button {
@@ -120,9 +126,12 @@ background-image:url(img/back.jpg);
 			<button onclick="self.location.href='kitchen.php'" style="position:absolute; bottom:10px; right:10px;width:120px; height:40px; font-size:20px;">返回</button>
             </div>
         </div>
-	<div id="picture2">
-		<p><img src="img/11.jpg"width="250"/ ></p>
-	</div>
+		<div id="picture">
+		<p><img src="img/m4.gif"width="200"/ ></p>
+	    </div>
+	    <div id="picture2">
+		<p><img src="img/m2.gif"width="150"/ ></p>
+	     </div>
     </div>
 </div>
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>

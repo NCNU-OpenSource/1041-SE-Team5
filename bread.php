@@ -35,13 +35,13 @@ td+td {text-align:left; padding-left:10px}
 }
 #picture {
 position:absolute;
-left:5%;
-top:25%;
+left:3%;
+top:30%;
 opacity:0.35;
 }
 #picture2 {
 position:absolute;
-left:5%;
+left:3%;
 top:60%;
 opacity:0.35;
 }
@@ -277,10 +277,10 @@ font-weight:bold;
         </div>
     </div>
 	<div id="picture">
-		<p><img src="img/chef.jpg"width="200"/ ></p>
+		<p><img src="img/m1.gif"width="200"/ ></p>
 	</div>
 	<div id="picture2">
-		<p><img src="img/chef2.jpg"width="250"/ ></p>
+		<p><img src="img/m5.gif"width="200"/ ></p>
 	</div>
 </div>
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>

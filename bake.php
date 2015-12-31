@@ -245,10 +245,7 @@
         </div>
     </div>
 	<div id="picture">
-		<p><img src="bread/chef.jpg"width="200"/ ></p>
-	</div>
-	<div id="picture2">
-		<p><img src="bread/chef2.jpg"width="250"/ ></p>
+		<p><img src="img/m7.gif"width="200"/ ></p>
 	</div>
 </div>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
