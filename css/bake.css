@@ -9,7 +9,7 @@ html, body{
     height:100%;
     width:100%;
     background-color:#DAA520;
-    background-image:url('../img/back.jpg');
+    background-image:url('../img/22.jpg');
     background-opacity:0.1;
     background-position: 150px 300px;
 }
@@ -94,14 +94,14 @@ button{
 #picture {
     position:absolute;
     left:3%;
-    top:34%;
-    opacity:0.35;
+    top:40%;
+    opacity:0.6;
 }
 #picture2 {
     position:absolute;
     left:5%;
     top:60%;
-    opacity:0.35;
+    opacity:0.6;
 }
 .buttons {
     background-image:url('../img/13.jpg');

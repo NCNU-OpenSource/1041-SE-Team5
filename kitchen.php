@@ -16,7 +16,7 @@ require("config.php");
 <style type="text/css">
 body {
 background-color:#DAA520;
-background-image:url(img/back.jpg);
+background-image:url(img/22.jpg);
 background-opacity:0.1;
 background-position: 150px 300px;
 }
@@ -36,13 +36,13 @@ td+td {text-align:left; padding-left:10px}
 position:absolute;
 left:5%;
 top:25%;
-opacity:0.35;
+opacity:0.6;
 }
 #picture2 {
 position:absolute;
 left:2%;
 top:45%;
-opacity:0.25;
+opacity:0.6;
 }
 button {
 background-image:url(img/13.jpg);

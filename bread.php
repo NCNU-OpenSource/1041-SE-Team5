@@ -15,7 +15,7 @@
 <style type="text/css">
 body {
 background-color:#DAA520;
-background-image:url(img/back.jpg);
+background-image:url(img/22.jpg);
 background-opacity:0.1;
 background-position: 150px 300px;
 font-size:12pt;
@@ -36,14 +36,14 @@ td+td {text-align:left; padding-left:10px}
 #picture {
 position:absolute;
 left:3%;
-top:30%;
-opacity:0.35;
+top:33%;
+opacity:0.6;
 }
 #picture2 {
 position:absolute;
 left:3%;
-top:60%;
-opacity:0.35;
+top:61%;
+opacity:0.6;
 }
 button {
 background-image:url(img/13.jpg);

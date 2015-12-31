@@ -16,7 +16,7 @@
 <style type="text/css">
 body {
 background-color:#DAA520;
-background-image:url(img/back.jpg);
+background-image:url(img/22.jpg);
 background-opacity:0.1;
 background-position: 150px 300px;
 font-size:12pt;
@@ -31,15 +31,15 @@ letter-spacing: 4pt;
 }
 #picture {
 position:absolute;
-left:10%;
-top:37%;
-opacity:0.35;
+left:12%;
+top:34%;
+opacity:0.6;
 }
 #picture2 {
 position:absolute;
 left:1%;
 top:34%;
-opacity:0.35;
+opacity:0.6;
 }
 button {
 background-image:url(img/13.jpg);
@@ -127,7 +127,7 @@ background-image:url(img/back.jpg);
             </div>
         </div>
 		<div id="picture">
-		<p><img src="img/m4.gif"width="200"/ ></p>
+		<p><img src="img/m4.gif"width="130" height="240"/ ></p>
 	    </div>
 	    <div id="picture2">
 		<p><img src="img/m2.gif"width="150"/ ></p>
