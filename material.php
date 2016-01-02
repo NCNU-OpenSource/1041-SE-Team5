@@ -80,18 +80,114 @@ background-image:url(img/back.jpg);
                 <div class="col-md-9" id="table">
                     <table align="center"  cellspacing="10" cellpadding="5" >
                     <thead><tr><br/>
-                    <th width="200"height="150"align="Center">薑餅人<br/><button type="button" id="button1" style="width:200px; height:150px; font-size:15px"><img src="img/8.png"width="175px"height="120px"/></button><br/>材料包：1<br/><br/><br/></th>
-                    <th width="200"height="150"align="Center">甜甜圈<br/><button type="button" id="button1" style="width:200px; height:150px; font-size:15px"><img src="img/6.png"width="175"height="150"/></button><br/>材料包：1<br/><br/><br/></th>
-                    <th width="200"height="150"align="Center">紅豆麵包<br/><button type="button" id="button1" style="width:200px; height:150px; font-size:15px"><img src="img/1.png"width="175"height="150"/></button><br/>材料包：2<br/><br/><br/></th>
-                    <th width="200"height="150"align="Center">杯子蛋糕<br/><button type="button" id="button1" style="width:200px; height:150px; font-size:15px"><img src="img/4.png"width="175"height="150"/></button><br/>材料包：2<br/><br/><br/></th>
+                    <th width="200"height="150"align="Center">薑餅人<br/><img src="img/8.png"width="175px"height="150px"/><br/>材料包：1 
+                    &nbsp;&nbsp;&nbsp;<img src="img/15.jpg"width="25"height="20"/> 
+                    <?php
+				    $sqlb = "select * from player where pname='$pname'";
+				    $results=mysqli_query($conn,$sqlb);
+				    if($rs=mysqli_fetch_array($results)){
+					    if($rs["material"]==0){
+						    echo "<button>buy</button><br/></th>";
+					    }
+					    else echo "<button><a href='materialbuy.php?id=",1 ,"'>buy</a></button><br/></th>";
+				    }
+				    else echo "<button>buy</button><br/></th>";
+				    ?>
+                    <th width="200"height="150"align="Center">甜甜圈<br/><img src="img/6.png"width="175"height="150"/></button><br/>材料包：1
+                    &nbsp;&nbsp;&nbsp;<img src="img/15.jpg"width="25"height="20"/> 
+                    <?php
+				    $sqlb = "select * from player where pname='$pname'  ";
+				    $results=mysqli_query($conn,$sqlb);
+				    if($rs=mysqli_fetch_array($results)){
+					    if($rs["material"]==0){
+						    echo "<button>buy</button><br/></th>";
+					    }
+					    else echo "<button><a href='materialbuy.php?id=",2 ,"'>buy</a></button><br/></th>";
+				    }
+				    else echo "<button>buy</button><br/></th>";
+				    ?>
+                    <th width="200"height="150"align="Center">紅豆麵包<br/><img src="img/1.png"width="175"height="150"/><br/>材料包：2
+                    &nbsp;&nbsp;&nbsp;<img src="img/15.jpg"width="25"height="20"/> 
+                    <?php
+				    $sqlb = "select * from player  where pname='$pname'  ";
+				    $results=mysqli_query($conn,$sqlb);
+				    if($rs=mysqli_fetch_array($results)){
+					    if($rs["material"]==0){
+						    echo "<button>buy</button><br/></th>";
+					    }
+					    else echo "<button><a href='materialbuy.php?id=",3 ,"'>buy</a></button><br/></th>";
+				    }
+				    else echo "<button>buy</button><br/></th>";
+				    ?>
+                    <th width="200"height="150"align="Center">杯子蛋糕<br/><img src="img/4.png"width="175"height="150"/><br/>材料包：2
+                    &nbsp;&nbsp;&nbsp;<img src="img/15.jpg"width="25"height="20"/> 
+                    <?php
+				    $sqlb = "select * from player  where pname='$pname' ";
+				    $results=mysqli_query($conn,$sqlb);
+				    if($rs=mysqli_fetch_array($results)){
+					    if($rs["material"]==0){
+						    echo "<button>buy</button><br/></th>";
+					    }
+					    else echo "<button><a href='materialbuy.php?id=",4 ,"'>buy</a></button><br/></th>";
+				    }
+				    else echo "<button>buy</button><br/></th>";
+				    ?>
                     </tr></thead>
                     <thead><tr>
-                    <th width="200"height="150"align="Center">法國麵包<br/><button type="button" id="button1" style="width:200px; height:150px; font-size:15px"><img src="img/5.png"width="175"height="150"/></button><br/>材料包：2<br/><br/><br/></th>
-                    <th width="200"height="150"align="Center">牛角麵包<br/><button type="button" id="button1" style="width:200px; height:150px; font-size:15px"><img src="img/3.png"width="175"height="150"/></button><br/>材料包：3<br/><br/><br/></th>
-                    <th width="200"height="150"align="Center">牛奶吐司<br/><button type="button" id="button1" style="width:200px; height:150px; font-size:15px"><img src="img/2.png"width="175"height="150"/></button><br/>材料包：3<br/><br/><br/></th>
-                    <th width="200"height="150"align="Center">燕麥吐司<br/><button type="button" id="button1" style="width:200px; height:150px; font-size:15px"><img src="img/7.png"width="175"height="150"/></button><br/>材料包：3<br/><br/><br/></th>
+                    <th width="200"height="150"align="Center">法國麵包<br/><img src="img/5.png"width="175"height="150"/><br/>材料包：2
+                    &nbsp;&nbsp;&nbsp;<img src="img/15.jpg"width="25"height="20"/> 
+                    <?php
+				    $sqlb = "select * from player  where pname='$pname'  ";
+				    $results=mysqli_query($conn,$sqlb);
+				    if($rs=mysqli_fetch_array($results)){
+					    if($rs["material"]==0){
+						    echo "<button>buy</button><br/></th>";
+					    }
+					    else echo "<button><a href='materialbuy.php?id=",5 ,"'>buy</a></button><br/></th>";
+				    }
+				    else echo "<button>buy</button><br/></th>";
+				    ?>
+                    <th width="200"height="150"align="Center">牛角麵包<br/><img src="img/3.png"width="175"height="150"/><br/>材料包：3
+                    &nbsp;&nbsp;&nbsp;<img src="img/15.jpg"width="25"height="20"/> 
+                    <?php
+				    $sqlb = "select * from player  where pname='$pname' ";
+				    $results=mysqli_query($conn,$sqlb);
+				    if($rs=mysqli_fetch_array($results)){
+					    if($rs["material"]==0){
+						    echo "<button>buy</button><br/></th>";
+					    }
+					    else echo "<button><a href='materialbuy.php?id=",6 ,"'>buy</a></button><br/></th>";
+				    }
+				    else echo "<button>buy</button><br/></th>";
+				    ?>
+                    <th width="200"height="150"align="Center">牛奶吐司<br/><img src="img/2.png"width="175"height="150"/><br/>材料包：3
+                    &nbsp;&nbsp;&nbsp;<img src="img/15.jpg"width="25"height="20"/> 
+                    <?php
+				    $sqlb = "select * from player  where pname='$pname'";
+				    $results=mysqli_query($conn,$sqlb);
+				    if($rs=mysqli_fetch_array($results)){
+					    if($rs["material"]==0){
+						    echo "<button>buy</button><br/></th>";
+					    }
+					    else echo "<button><a href='materialbuy.php?id=",7 ,"'>buy</a></button><br/></th>";
+				    }
+				    else echo "<button>buy</button><br/></th>";
+				    ?>
+                    <th width="200"height="150"align="Center">燕麥吐司<br/><img src="img/7.png"width="175"height="150"/><br/>材料包：3
+                    &nbsp;&nbsp;&nbsp;<img src="img/15.jpg"width="25"height="20"/> 
+                    <?php
+				    $sqlb = "select * from player  where pname='$pname'  ";
+				    $results=mysqli_query($conn,$sqlb);
+				    if($rs=mysqli_fetch_array($results)){
+					    if($rs["material"]==0){
+						    echo "<button>buy</button><br/></th>";
+					    }
+					    else echo "<button><a href='materialbuy.php?id=",8 ,"'>buy</a></button><br/></th>";
+				    }
+				    else echo "<button>buy</button><br/></th>";
+				    ?>
                     </tr></thead>
-                    <thead><tr>
+                    <br/><thead><tr>
                     <th>
                     <?php
                         $sql1 = "select  * from player  where pname='$pname'";
@@ -112,6 +208,7 @@ background-image:url(img/back.jpg);
                         }
                     ?>
                     </th>
+                    </tr>
                     </thead>
                     </table>
                     <br/>
