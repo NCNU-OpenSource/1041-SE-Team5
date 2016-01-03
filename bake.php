@@ -31,10 +31,7 @@
             new Countdown({
                 selector: '.timer<?php echo $oid[$i-1];?>',
                 msgBefore: "",
-                msgAfter: "<?php echo '烤好了!';
-                            $sqlyy = "update ovenplayer set status=2 btime=0 where oid='".$oid[$i-1]."' and pname='$pname'";
-                            mysqli_query($conn,$sqlyy);
-                            ?>",
+                msgAfter: "<?php echo "<a href='bakeok.php?oid=".$oid[$i-1]."'>好了!</a>";?>",
                 msgPattern: "{seconds} s",
                 dateStart: new Date(),
                 dateEnd: new Date('<?php echo date("M d, Y H:i:s",$endtime[$i-1])?>'),
@@ -90,21 +87,10 @@
             <?php } ?>
         <?php }; ?>
     };
-    function addLoadEvent(func) {
-      var oldonload = window.onload;
-      if (typeof window.onload != 'function') {
-        window.onload = func;
-      } else {
-        window.onload = function() {
-          if (oldonload) {
-            oldonload();
-          }
-          func();
-        }
-      }
-    }
-    addLoadEvent(statuscheck);
-    addLoadEvent(start);
+    window.onload = function () {
+        statuscheck();
+        setTimeout(start, 500);
+    };
     </script>
 <title>快樂廚房</title>
 </head>
@@ -131,7 +117,7 @@
                     <div class="container-fluid" id="main_in">
                         <div class="row">
                             <div class="col-md-6" id="oven1">
-                                <button type="button" id="oven1_b" class="oven btn btn-link btn-block" data-toggle="modal" data-target="#put_material1"><?php echo "<span id=\"upper\" class=\"timer1 label label-info\"></span>";?></button>
+                                <button type="button" id="oven1_b" class="oven btn btn-link btn-block" data-toggle="modal" data-target="#put_material1"></button><?php echo "<span id=\"upper\" class=\"timer1 label label-info\"></span>";?>
                                 <div class="modal fade bs-example-modal-sm" id="put_material1" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                                   <div class="modal-dialog modal-sm">
                                     <div class="modal-content">
@@ -154,7 +140,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6" id="oven2">
-                                <button type="button" id="oven2_b" class="oven btn btn-link btn-block" data-toggle="modal" data-target="#put_material2"><?php echo "<span id=\"upper\" class=\"timer2 label label-info\"></span>";?></button>
+                                <button type="button" id="oven2_b" class="oven btn btn-link btn-block" data-toggle="modal" data-target="#put_material2"></button><?php echo "<span id=\"upper\" class=\"timer2 label label-info\"></span>";?>
                                 <div class="modal fade bs-example-modal-sm" id="put_material2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                                   <div class="modal-dialog modal-sm">
                                     <div class="modal-content">
@@ -179,7 +165,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6" id="oven3">
-                                <button type="button" id="oven3_b" class="oven btn btn-link btn-block" data-toggle="modal" data-target="#put_material3"><?php echo "<span id=\"upper\" class=\"timer3 label label-info\"></span>";?></button>
+                                <button type="button" id="oven3_b" class="oven btn btn-link btn-block" data-toggle="modal" data-target="#put_material3"></button><?php echo "<span id=\"upper\" class=\"timer3 label label-info\"></span>";?>
                                 <div class="modal fade bs-example-modal-sm" id="put_material3" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                                   <div class="modal-dialog modal-sm">
                                     <div class="modal-content">
@@ -202,7 +188,7 @@
                                 </div>
                             </div>                           
                             <div class="col-md-6" id="oven4">
-                                <button type="button" id="oven4_b" class="oven btn btn-link btn-block" data-toggle="modal" data-target="#put_material4"><?php echo "<span id=\"upper\" class=\"timer4 label label-info\"></span>";?></button>
+                                <button type="button" id="oven4_b" class="oven btn btn-link btn-block" data-toggle="modal" data-target="#put_material4"></button><?php echo "<span id=\"upper\" class=\"timer4 label label-info\"></span>";?>
                                 <div class="modal fade bs-example-modal-sm" id="put_material4" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                                   <div class="modal-dialog modal-sm">
                                     <div class="modal-content">
