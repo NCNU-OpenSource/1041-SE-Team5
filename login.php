@@ -23,10 +23,10 @@ background-size:cover;
 </style>
 <?php
 session_start();
-$host = 'localhost';
-$user = 'Gina';
-$pass = '48477984';
-$db = 'kitchen';
+$host = 'localhost';//定義一個資料庫
+$user = 'myid';
+$pass = '12345';
+$db = 'mydb';
 $conn = mysqli_connect($host, $user, $pass,$db) or die('Error with MySQL connection'); //跟MyMSQL連線並登入
 mysqli_query($conn,"SET NAMES utf8"); //選擇編碼
 //mysql_select_db($db, $conn); //選擇資料庫
@@ -66,16 +66,16 @@ if(isset( $_POST['id'])){
 ?>
 <body>
 
-<div style="position: absolute;bottom: 0;left:200px">
+<div style="position: absolute;bottom: 0;left:200px;">
 <form method="post" action="regist.php">
-帳號: <input type="text" name="id"><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Account: <input type="text" name="id"><br />
 User Name: <input type="text" name="pname"><br />
-Password : <input type="password" name="pwd"><br />
+&nbsp;&nbsp;Password : <input type="password" name="pwd"><br />
 <input type="image" value="Log in" src="img/register.png" >
 </form>
 <form method="post" action="login.php">
-帳號: <input type="text" name="id"><br />
-Password : <input type="password" name="pwd"><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;帳號: <input type="text" name="id"><br />
+&nbsp;Password : <input type="password" name="pwd"><br />
 <input type="image" value="Log in" src="img/login.png" >
 </form>
 </div>
