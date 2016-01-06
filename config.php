@@ -16,3 +16,8 @@ if($_SESSION["uID"]=="")
 	header("Location:login.php");
 
 ?>
+<html>
+<body>
+<embed src="music/happy.mp3" autostart=true hidden="true" loop="-1">
+</body>
+</html>
