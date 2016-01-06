@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 27, 2015 at 10:53 PM
+-- Generation Time: Jan 06, 2016 at 08:35 PM
 -- Server version: 5.6.24
 -- PHP Version: 5.6.8
 
@@ -89,7 +89,7 @@ CREATE TABLE IF NOT EXISTS `player` (
 --
 
 INSERT INTO `player` (`pid`, `pname`, `pwd`, `exp`, `level`, `coin`, `material`) VALUES
-('111', 'a', '111', 72, 40, 999000, 999952);
+('111', 'a', '111', 98, 40, 999000, 999941);
 
 -- --------------------------------------------------------
 
@@ -109,8 +109,8 @@ CREATE TABLE IF NOT EXISTS `playerbread` (
 --
 
 INSERT INTO `playerbread` (`pbid`, `bid`, `pname`, `bnum`) VALUES
-('a_1', 1, 'a', 3),
-('a_2', 2, 'a', 2);
+('a_1', 1, 'a', 7),
+('a_2', 2, 'a', 3);
 
 --
 -- Indexes for dumped tables
