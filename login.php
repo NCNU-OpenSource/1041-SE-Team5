@@ -66,7 +66,7 @@ if(isset( $_POST['id'])){
 ?>
 <body>
 
-<div style="position: absolute;bottom: 0;left:100px">
+<div style="position: absolute;bottom: 0;left:200px">
 <form method="post" action="regist.php">
 帳號: <input type="text" name="id"><br />
 User Name: <input type="text" name="pname"><br />
