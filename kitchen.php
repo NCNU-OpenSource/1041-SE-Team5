@@ -63,12 +63,18 @@ font-weight:bold;
         <div class="col-md-12" id="section1">
             <div class="row no-gutter" id="section1-1">
                 <div class="col-md-3" id="leftbar">
-				    <p></p>
-                    <p>玩家名稱：<br/>
-                    經驗值：<br/>
-                    等級：<br/>
-                    金幣：</p><br/><br/><br/>
-                </div>
+					<?php
+                        $sql1 = "select  * from player  where pname='$pname'";
+                        $results1=mysqli_query($conn,$sql1);
+                        if($rows=mysqli_fetch_array($results1)){
+                            echo"<div id=\"column\">",
+                                "玩家名稱：".$rows["pname"]."</br>",
+                                "等級:".$rows["level"]."</br>",
+                                "金幣:".$rows["coin"]."</br>",
+                                "經驗值：".$rows["exp"]."</br>",
+                                "材料包:".$rows["material"]."個</br></br></div>";
+                        }
+                    ?>                </div>
                 <div class="col-md-9" id="main">
                     <div class="link1">
                         <a href="bake.php"><img id="koven"src="img/kioven.png" width="300" height="200" hspace="200" class="img-rounded" alt="Bake"></a>
