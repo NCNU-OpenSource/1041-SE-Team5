@@ -18,6 +18,6 @@ if($_SESSION["uID"]=="")
 ?>
 <html>
 <body>
-<embed src="music/happy.mp3" autostart=true hidden="true" loop="-1">
+<!--<embed src="music/happy.mp3" autostart=true hidden="true" loop="-1">-->
 </body>
 </html>

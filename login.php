@@ -79,7 +79,7 @@ User Name: <input type="text" name="pname"><br />
 <input type="image" value="Log in" src="img/login.png" >
 </form>
 </div>
-<embed src="music/happy.mp3" autostart=true hidden=true loop=true>
+<!--<embed src="music/happy.mp3" autostart=true hidden=true loop=true>-->
 
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 <!-- 最新編譯和最佳化的 JavaScript -->
