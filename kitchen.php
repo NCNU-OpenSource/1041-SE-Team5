@@ -75,7 +75,8 @@ font-weight:bold;
                                 "經驗值：".$rows["exp"]."</br>",
                                 "材料包:".$rows["material"]."個</br></br></div>";
                         }
-                    ?>                </div>
+                    ?>
+					</div>
                 <div class="col-md-9" id="main">
                     <div class="link1">
                         <a href="bake.php"><img id="koven"src="img/kioven.png" width="300" height="200" hspace="200" class="img-rounded" alt="Bake"></a>
