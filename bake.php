@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/bake.css">
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="js/countdown.min.js"></script>
+    <script src="js/countdown.min.js"></script><!--網路找的-->
     <script text/javascript>
     function start(){
         <?php for($i=1;$i<=$rsa['r'];$i++){?>
@@ -54,8 +54,8 @@
             var oven_now = '<?php echo $rsc['oid'] ?>';
             var target = "oven"+oven_now+"_b";
             <?php if($rsc['status']=='1'){ ?>
-                $("#"+target).attr('disabled',true);
-                $("#"+target).css("background-image", "url('img/oven3.png')");
+                $("#"+target).attr('disabled',true);//attr是根據狀態改變按鈕的屬性與動作
+                $("#"+target).css("background-image", "url('img/oven3.png')");//css就是改變圖片
                 start();
             <?php } 
             else if($rsc['status']=='2'){ ?>
