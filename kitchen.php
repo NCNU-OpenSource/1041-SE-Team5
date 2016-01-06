@@ -1,5 +1,6 @@
 <?php
 require("config.php");
+$pname=$_SESSION['pname'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
