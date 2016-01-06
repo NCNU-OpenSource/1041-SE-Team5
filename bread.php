@@ -286,5 +286,6 @@ font-weight:bold;
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 <!-- 最新編譯和最佳化的 JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<audio src="music/happy.mp3" controls autoplay loop hidden="true" >
 </body>
 </html>
