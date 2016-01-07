@@ -187,8 +187,8 @@ background-image:url(img/back.jpg);
 				    else echo "<button>buy</button><br/></th>";
 				    ?>
                     </tr></thead>
-                    <br/><thead><tr>
-                    <th>
+                    <br/><thead><tr><th></th>
+                    <th style="font-size:16pt;">
                     <?php
                         $sql1 = "select  * from player  where pid='$pid'";
                         $results1=mysqli_query($conn,$sql1);
@@ -198,7 +198,7 @@ background-image:url(img/back.jpg);
                         }
                     ?>
                     </th>
-                    <th>
+                    <th style="font-size:16pt;">
                     <?php
                         $sql1 = "select  * from player  where pid='$pid'";
                         $results1=mysqli_query($conn,$sql1);
