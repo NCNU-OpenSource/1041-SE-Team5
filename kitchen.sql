@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 06, 2016 at 08:35 PM
+-- Generation Time: Jan 07, 2016 at 11:56 PM
 -- Server version: 5.6.24
 -- PHP Version: 5.6.8
 
@@ -51,22 +51,27 @@ INSERT INTO `bread` (`bid`, `bname`, `baketime`, `m_num`, `sellmoney`, `avalleve
 --
 
 CREATE TABLE IF NOT EXISTS `ovenplayer` (
+  `opid` int(11) NOT NULL,
   `oid` int(11) NOT NULL,
-  `pname` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `pid` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `bid` int(11) NOT NULL,
   `btime` int(11) NOT NULL,
   `status` int(11) NOT NULL DEFAULT '4'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `ovenplayer`
 --
 
-INSERT INTO `ovenplayer` (`oid`, `pname`, `bid`, `btime`, `status`) VALUES
-(1, 'a', 0, 0, 0),
-(2, 'a', 0, 0, 0),
-(3, 'a', 0, 0, 3),
-(4, 'a', 0, 0, 3);
+INSERT INTO `ovenplayer` (`opid`, `oid`, `pid`, `bid`, `btime`, `status`) VALUES
+(1, 1, '111', 0, 0, 0),
+(2, 2, '111', 0, 0, 0),
+(3, 3, '111', 0, 0, 3),
+(4, 4, '111', 0, 0, 3),
+(5, 1, '222', 0, 0, 0),
+(6, 2, '222', 0, 0, 4),
+(7, 3, '222', 0, 0, 4),
+(8, 4, '222', 0, 0, 4);
 
 -- --------------------------------------------------------
 
@@ -89,7 +94,8 @@ CREATE TABLE IF NOT EXISTS `player` (
 --
 
 INSERT INTO `player` (`pid`, `pname`, `pwd`, `exp`, `level`, `coin`, `material`) VALUES
-('111', 'a', '111', 98, 40, 999000, 999941);
+('111', 'a', '111', 114, 40, 999000, 999932),
+('222', '222', '222', 0, 1, 30, 0);
 
 -- --------------------------------------------------------
 
@@ -100,7 +106,7 @@ INSERT INTO `player` (`pid`, `pname`, `pwd`, `exp`, `level`, `coin`, `material`)
 CREATE TABLE IF NOT EXISTS `playerbread` (
   `pbid` varchar(40) COLLATE utf8mb4_unicode_ci NOT NULL,
   `bid` int(11) NOT NULL,
-  `pname` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `pid` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `bnum` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -108,9 +114,9 @@ CREATE TABLE IF NOT EXISTS `playerbread` (
 -- Dumping data for table `playerbread`
 --
 
-INSERT INTO `playerbread` (`pbid`, `bid`, `pname`, `bnum`) VALUES
-('a_1', 1, 'a', 7),
-('a_2', 2, 'a', 3);
+INSERT INTO `playerbread` (`pbid`, `bid`, `pid`, `bnum`) VALUES
+('111_1', 1, '111', 10),
+('111_2', 2, '111', 2);
 
 --
 -- Indexes for dumped tables
@@ -126,7 +132,7 @@ ALTER TABLE `bread`
 -- Indexes for table `ovenplayer`
 --
 ALTER TABLE `ovenplayer`
-  ADD PRIMARY KEY (`oid`);
+  ADD PRIMARY KEY (`opid`);
 
 --
 -- Indexes for table `player`
@@ -149,6 +155,11 @@ ALTER TABLE `playerbread`
 --
 ALTER TABLE `bread`
   MODIFY `bid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `ovenplayer`
+--
+ALTER TABLE `ovenplayer`
+  MODIFY `opid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
