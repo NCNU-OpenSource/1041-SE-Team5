@@ -1,11 +1,11 @@
 <?php
     include"config.php";
-    $pname=$_SESSION['pname'];
+    $pid=$_SESSION['uID'];
     //for timer
-    $sqla = "select count(oid) as r from ovenplayer  where pname='$pname' and status=1";
+    $sqla = "select count(oid) as r from ovenplayer  where pid='$pid' and status=1";
     $resultsta=mysqli_query($conn,$sqla);
     $rsa=mysqli_fetch_array($resultsta);
-    $sqltimer = "select oid , ovenplayer.bid , btime from ovenplayer , bread  where pname='$pname' and status=1 and ovenplayer.bid=bread.bid";
+    $sqltimer = "select oid , ovenplayer.bid , btime from ovenplayer , bread  where pid='$pid' and status=1 and ovenplayer.bid=bread.bid";
     $resultst=mysqli_query($conn,$sqltimer);
     while ($rst=mysqli_fetch_array($resultst)) {
         $oid[]=$rst['oid'];
@@ -46,7 +46,7 @@
     };
     function statuscheck(){
       <?php 
-        $sqlb = "select * from ovenplayer  where pname='$pname' order by oid";
+        $sqlb = "select * from ovenplayer  where pid='$pid' order by oid";
         $resultstb=mysqli_query($conn,$sqlb);
         while($rsc=mysqli_fetch_array($resultstb)){?>
             var i = <?php echo $rsc['oid']?>;
@@ -101,7 +101,7 @@
             <div class="row no-gutter" id="section1-1">
                 <div class="col-md-3" id="leftbar">
                     <?php
-                        $sql1 = "select  * from player  where pname='$pname'";
+                        $sql1 = "select  * from player  where pid='$pid'";
                         $results1=mysqli_query($conn,$sql1);
                         if($rows=mysqli_fetch_array($results1)){
                             echo"<div id=\"column\">",
@@ -123,7 +123,7 @@
                                     <div class="modal-content">
                                         <h2>要放幾個料包呢?</h2></br>
                                         <form method='post' action='bakestart.php'>
-                                        <?php $sql1 = "select  * from player  where pname='$pname'";
+                                        <?php $sql1 = "select  * from player  where pid='$pid'";
                                               $results1=mysqli_query($conn,$sql1);
                                               if($rows=mysqli_fetch_array($results1)){
                                                 $m_num=$rows["material"];
@@ -146,7 +146,7 @@
                                     <div class="modal-content">
                                         <h2>要放幾個料包呢?</h2></br>
                                         <form method='post' action='bakestart.php'>
-                                        <?php $sql1 = "select  * from player  where pname='$pname'";
+                                        <?php $sql1 = "select  * from player  where pid='$pid'";
                                               $results1=mysqli_query($conn,$sql1);
                                               if($rows=mysqli_fetch_array($results1)){
                                                 $m_num=$rows["material"];
@@ -171,7 +171,7 @@
                                     <div class="modal-content">
                                         <h2>要放幾個料包呢?</h2></br>
                                         <form method='post' action='bakestart.php'>
-                                        <?php $sql1 = "select  * from player  where pname='$pname'";
+                                        <?php $sql1 = "select  * from player  where pid='$pid'";
                                               $results1=mysqli_query($conn,$sql1);
                                               if($rows=mysqli_fetch_array($results1)){
                                                 $m_num=$rows["material"];
@@ -194,7 +194,7 @@
                                     <div class="modal-content">
                                         <h2>要放幾個料包呢?</h2></br>
                                         <form method='post' action='bakestart.php'>
-                                        <?php $sql1 = "select  * from player  where pname='$pname'";
+                                        <?php $sql1 = "select  * from player  where pid='$pid'";
                                               $results1=mysqli_query($conn,$sql1);
                                               if($rows=mysqli_fetch_array($results1)){
                                                 $m_num=$rows["material"];
