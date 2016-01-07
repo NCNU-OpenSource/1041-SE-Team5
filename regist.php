@@ -25,6 +25,14 @@ $pwd=mysqli_real_escape_string($conn,$_POST['pwd']);
 if ($id) { //留言一定要有標題
 	$sql = "insert into player (pid,pname, pwd) values ('$id','$pname','$pwd');"; 
 	mysqli_query($conn,$sql) or die("MySQL insert message error"); //執行SQL
+    $sql1 = "insert into ovenplayer (oid, pid, status) values (1, '$id', 0)";
+	mysqli_query($conn,$sql1) or die("MySQL insert message error1"); //執行SQL
+    $sql2 = "insert into ovenplayer (oid, pid) values (2, '$id')";
+	mysqli_query($conn,$sql2) or die("MySQL insert message error2"); //執行SQL
+    $sql3 = "insert into ovenplayer (oid, pid) values (3, '$id')";
+	mysqli_query($conn,$sql3) or die("MySQL insert message error3"); //執行SQL
+    $sql4 = "insert into ovenplayer (oid, pid) values (4, '$id')";
+	mysqli_query($conn,$sql4) or die("MySQL insert message error4"); //執行SQL
 	echo "message added.";
 	header("Location:login.php");
 } else {
