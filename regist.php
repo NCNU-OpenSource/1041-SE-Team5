@@ -18,11 +18,18 @@ $db = 'kitchen';
 $conn = mysqli_connect($host, $user, $pass,$db) or die('Error with MySQL connection'); //跟MyMSQL連線並登入
 mysqli_query($conn,"SET NAMES utf8"); //選擇編碼
 //mysql_select_db($db, $conn); //選擇資料庫
-$id=mysqli_real_escape_string($conn,    $_POST['id']   ); //取得名子為title的值post送給string字串存起來
+$id=mysqli_real_escape_string($conn, $_POST['id']   ); //取得名子為title的值post送給string字串存起來
 $pname=mysqli_real_escape_string($conn,    $_POST['pname']   ); 
 $pwd=mysqli_real_escape_string($conn,$_POST['pwd']);
 
-if ($id) { //留言一定要有標題
+$sql5="SELECT pid FROM player where pid = '$id'";
+$result=mysqli_query($conn,$sql5);
+$row = mysqli_fetch_row($result);
+if($row){
+	echo '<script type="text/javascript">alert("Repeated Account!");</script>';
+	echo '<script>history.back()</script>';
+}
+else { //留言一定要有標題
 	$sql = "insert into player (pid,pname, pwd) values ('$id','$pname','$pwd');"; 
 	mysqli_query($conn,$sql) or die("MySQL insert message error"); //執行SQL
     $sql1 = "insert into ovenplayer (oid, pid, status) values (1, '$id', 0)";
@@ -35,9 +42,8 @@ if ($id) { //留言一定要有標題
 	mysqli_query($conn,$sql4) or die("MySQL insert message error4"); //執行SQL
 	echo "message added.";
 	header("Location:login.php");
-} else {
-	echo "empty title, cannot insert.";
-}
+} 
+
 ?>
 <body>
 
