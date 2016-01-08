@@ -28,6 +28,7 @@ background-repeat: no-repeat;
 padding:8px 0px 3px 10px;
 opacity:0.7;
 letter-spacing: 4pt;
+font-size:14pt;
 }
 #table{
 td {text-align: left;}

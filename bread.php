@@ -1,6 +1,6 @@
 <?php
     include"config.php";
-    $pname=$_SESSION['pname'];
+    $pid=$_SESSION['uID'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,9 +23,10 @@ font-size:12pt;
 #leftbar {
 background: linear-gradient(to right,#DEB887 40%,#FFDAB9);
 background-image:url(img/12.jpg);
+opacity:0.7;
 background-repeat: no-repeat;
 padding:8px 0px 3px 10px;
-opacity:0.7;
+
 letter-spacing: 4pt;
 font-size:14pt;
 }
@@ -36,13 +37,19 @@ td+td {text-align:left; padding-left:10px}
 #picture {
 position:absolute;
 left:3%;
-top:33%;
+top:34%;
 opacity:0.6;
 }
 #picture2 {
 position:absolute;
 left:3%;
-top:61%;
+top:62%;
+opacity:0.6;
+}
+#picture3 {
+position:absolute;
+left:85%;
+top:3%;
 opacity:0.6;
 }
 button {
@@ -68,7 +75,7 @@ font-weight:bold;
             <div class="row no-gutter" id="section1-1">
                 <div class="col-md-3" id="leftbar">
                     <?php
-                        $sql1 = "select  * from player  where pname='$pname'";
+                        $sql1 = "select  * from player  where pid='$pid'";
                         $results1=mysqli_query($conn,$sql1);
                         if($rows=mysqli_fetch_array($results1)){
                             echo"<div id=\"column\">",
@@ -83,9 +90,9 @@ font-weight:bold;
                 <div class="col-md-9" id="table">
                    <table align="center"  cellspacing="10" cellpadding="8">
 				   <thead><tr>
-				   <th>薑餅人<br/><img src="img/8.png"width="200"height="150"/><br/>價錢:15元&nbsp;&nbsp;&nbsp;時間:1min<br/>
+				   <th>薑餅人<br/><img src="img/8.png"width="200"height="150"/><br/>價錢:20元&nbsp;&nbsp;&nbsp;時間:1min<br/>
 				   <?php
-				   $sqlb = "select * from playerbread where pname='$pname' and bid=1 ";
+				   $sqlb = "select * from playerbread where pid='$pid' and bid=1 ";
 				   $results=mysqli_query($conn,$sqlb);
 				   if($rows=mysqli_fetch_array($results)){
 						   echo "庫存: ".$rows["bnum"]."個 ";
@@ -93,21 +100,21 @@ font-weight:bold;
 					   }
 				   else echo "庫存:0個 ";
 				   ?>
-				   &nbsp;&nbsp;&nbsp;<img src="img/15.jpg"width="25"height="20"/>
+				   &nbsp;&nbsp;&nbsp;<img src="img/15.gif"width="25"height="20"/>
 				   <?php
-				   $sqlb = "select * from playerbread  where pname='$pname' and bid=1 ";
+				   $sqlb = "select * from playerbread  where pid='$pid' and bid=1 ";
 				   $results=mysqli_query($conn,$sqlb);
 				   if($rs=mysqli_fetch_array($results)){
 					   if($rs["bnum"]==0){
-						   echo "<button>buy</button><br/></th>";
+						   echo "<button>sell</button><br/></th>";
 					   }
-					   else echo "<button><a href='breadbuy.php?id=",1 ,"'>buy</a></button><br/></th>";
+					   else echo "<button><a href='breadbuy.php?id=",1 ,"'>sell</a></button><br/></th>";
 				   }
-				   else echo "<button>buy</button><br/></th>";
+				   else echo "<button>sell</button><br/></th>";
 				   ?>
-				   <th>甜甜圈<br/><img src="img/6.png"width="200"height="150"/><br/>價錢:20元&nbsp;&nbsp;&nbsp;時間:2min<br/>
+				   <th>甜甜圈<br/><img src="img/6.png"width="200"height="150"/><br/>價錢:35元&nbsp;&nbsp;&nbsp;時間:2min<br/>
 				   <?php
-				   $sqlb = "select * from playerbread where pname='$pname' and bid=2 ";
+				   $sqlb = "select * from playerbread where pid='$pid' and bid=2 ";
 				   $results=mysqli_query($conn,$sqlb);
 				   if($rows=mysqli_fetch_array($results)){
 						   echo "庫存: ".$rows["bnum"]."個 ";
@@ -115,45 +122,45 @@ font-weight:bold;
 				   else echo "庫存:0個 ";
 	              
 				   ?>
-				   &nbsp;&nbsp;&nbsp; <img src="img/15.jpg"width="25"height="20"/>
+				   &nbsp;&nbsp;&nbsp; <img src="img/15.gif"width="25"height="20"/>
  				   <?php
-				   $sqlb = "select * from playerbread  where pname='$pname' and bid=2 ";
+				   $sqlb = "select * from playerbread  where pid='$pid' and bid=2 ";
 				   $results=mysqli_query($conn,$sqlb);
 				  
 				   if($rs=mysqli_fetch_array($results)){
 					   if($rs["bnum"]==0){
-						   echo "<button>buy</button><br/></th>";
+						   echo "<button>sell</button><br/></th>";
 					   }
-					   else echo "<button><a href='breadbuy.php?id=",2 ,"'>buy</a></button><br/></th>";
+					   else echo "<button><a href='breadbuy.php?id=",2 ,"'>sell</a></button><br/></th>";
 				   }
-				   else echo "<button>buy</button><br/></th>";
+				   else echo "<button>sell</button><br/></th>";
 				   ?>
 				   
-				   <th>紅豆麵包<br/><img src="img/1.png"width="200"height="150"/><br/>價錢:25元&nbsp;&nbsp;&nbsp;時間:3min<br/>
+				   <th>紅豆麵包<br/><img src="img/1.png"width="200"height="150"/><br/>價錢:55元&nbsp;&nbsp;&nbsp;時間:3min<br/>
 				   <?php
-				   $sqlb = "select * from playerbread where pname='$pname' and bid=3 ";
+				   $sqlb = "select * from playerbread where pid='$pid' and bid=3 ";
 				   $results=mysqli_query($conn,$sqlb);
 				   if($rows=mysqli_fetch_array($results)){
 						   echo "庫存: ".$rows["bnum"]."個 ";
 					   }
 				   else echo "庫存:0個 ";
 				   ?>
-				   &nbsp;&nbsp;&nbsp;<img src="img/15.jpg"width="25"height="20"/>
+				   &nbsp;&nbsp;&nbsp;<img src="img/15.gif"width="25"height="20"/>
 				   <?php
-				   $sqlb = "select * from playerbread  where pname='$pname' and bid=3 ";
+				   $sqlb = "select * from playerbread  where pid='$pid' and bid=3 ";
 				   $results=mysqli_query($conn,$sqlb);
 				  
 				   if($rs=mysqli_fetch_array($results)){
 					   if($rs["bnum"]==0){
-						   echo "<button>buy</button><br/></th>";
+						   echo "<button>sell</button><br/></th>";
 					   }
-					   else echo "<button><a href='breadbuy.php?id=",3 ,"'>buy</a></button><br/></th>";
+					   else echo "<button><a href='breadbuy.php?id=",3 ,"'>sell</a></button><br/></th>";
 				   }
-				   else echo "<button>buy</button><br/></th>";
+				   else echo "<button>sell</button><br/></th>";
 				   ?>
-				   <th>杯子蛋糕<br/><img src="img/4.png"width="200"height="150"/><br/>價錢:30元&nbsp;&nbsp;&nbsp;時間:3min<br/>
+				   <th>杯子蛋糕<br/><img src="img/4.png"width="200"height="150"/><br/>價錢:70元&nbsp;&nbsp;&nbsp;時間:3min<br/>
 				   <?php
-				   $sqlb = "select * from playerbread where pname='$pname' and bid=4 ";
+				   $sqlb = "select * from playerbread where pid='$pid' and bid=4 ";
 				   $results=mysqli_query($conn,$sqlb);
 				   if($rows=mysqli_fetch_array($results)){
 						   echo "庫存: ".$rows["bnum"]."個 ";
@@ -161,103 +168,103 @@ font-weight:bold;
 				   else echo "庫存:0個 ";
 					 
 				   ?>
-				   &nbsp;&nbsp;&nbsp;<img src="img/15.jpg"width="25"height="20"/>
+				   &nbsp;&nbsp;&nbsp;<img src="img/15.gif"width="25"height="20"/>
 				   <?php
-				   $sqlb = "select * from playerbread  where pname='$pname' and bid=4 ";
+				   $sqlb = "select * from playerbread  where pid='$pid' and bid=4 ";
 				   $results=mysqli_query($conn,$sqlb);
 				   if($rs=mysqli_fetch_array($results)){
 					   if($rs["bnum"]==0){
-						   echo "<button>buy</button><br/></th>";
+						   echo "<button>sell</button><br/></th>";
 					   }
-					   else echo "<button><a href='breadbuy.php?id=",4 ,"'>buy</a></button><br/></th>";
+					   else echo "<button><a href='breadbuy.php?id=",4 ,"'>sell</a></button><br/></th>";
 				   }
-				   else echo "<button>buy</button><br/></th>";
+				   else echo "<button>sell</button><br/></th>";
 				   ?>
 				   </tr></thead>
 				   <thead><tr>
-				   <th>法國麵包<br/><img src="img/5.png"width="200"height="150"/><br/>價錢:40元&nbsp;&nbsp;&nbsp;時間:4min<br/>
+				   <th>法國麵包<br/><img src="img/5.png"width="200"height="150"/><br/>價錢:90元&nbsp;&nbsp;&nbsp;時間:4min<br/>
 				   <?php
-				   $sqlb = "select * from playerbread where pname='$pname' and bid=5 ";
+				   $sqlb = "select * from playerbread where pid='$pid' and bid=5 ";
 				   $results=mysqli_query($conn,$sqlb);
 				   if($rows=mysqli_fetch_array($results)){
 						   echo "庫存: ".$rows["bnum"]."個 ";
 					   }
 				   else echo "庫存 0個 ";
 				   ?>
-				   &nbsp;&nbsp;&nbsp;<img src="img/15.jpg"width="25"height="20"/>
+				   &nbsp;&nbsp;&nbsp;<img src="img/15.gif"width="25"height="20"/>
 				   <?php
-				   $sqlb = "select * from playerbread  where pname='$pname' and bid=5 ";
+				   $sqlb = "select * from playerbread  where pid='$pid' and bid=5 ";
 				   $results=mysqli_query($conn,$sqlb);
 				   if($rs=mysqli_fetch_array($results)){
 					   if($rs["bnum"]==0){
-						   echo "<button>buy</button><br/></th>";
+						   echo "<button>sell</button><br/></th>";
 					   }
-					   else echo "<button><a href='breadbuy.php?id=",5 ,"'>buy</a></button><br/></th>";
+					   else echo "<button><a href='breadbuy.php?id=",5 ,"'>sell</a></button><br/></th>";
 				   }
-				   else echo "<button>buy</button><br/></th>";
+				   else echo "<button>sell</button><br/></th>";
 				   ?>
-				   <th>牛角麵包<br/><img src="img/3.png"width="200"height="150"/><br/>價錢:45元&nbsp;&nbsp;&nbsp;時間:5min<br/>
+				   <th>牛角麵包<br/><img src="img/3.png"width="200"height="150"/><br/>價錢:105元&nbsp;&nbsp;&nbsp;時間:5min<br/>
 				   <?php
-				   $sqlb = "select * from playerbread where pname='$pname' and bid=6 ";
+				   $sqlb = "select * from playerbread where pid='$pid' and bid=6 ";
 				   $results=mysqli_query($conn,$sqlb);
 				   if($rows=mysqli_fetch_array($results)){
 						   echo "庫存: ".$rows["bnum"]."個 ";
 					   }
 				   else echo "庫存 0個 ";
 				   ?>
-				   &nbsp;&nbsp;&nbsp;<img src="img/15.jpg"width="25"height="20"/>
+				   &nbsp;&nbsp;&nbsp;<img src="img/15.gif"width="25"height="20"/>
 				   <?php
-				   $sqlb = "select * from playerbread  where pname='$pname' and bid=6 ";
+				   $sqlb = "select * from playerbread  where pid='$pid' and bid=6 ";
 				   $results=mysqli_query($conn,$sqlb);
 				   if($rs=mysqli_fetch_array($results)){
 					   if($rs["bnum"]==0){
-						   echo "<button>buy</button><br/></th>";
+						   echo "<button>sell</button><br/></th>";
 					   }
-					   else echo "<button><a href='breadbuy.php?id=",6 ,"'>buy</a></button><br/></th>";
+					   else echo "<button><a href='breadbuy.php?id=",6 ,"'>sell</a></button><br/></th>";
 				   }
-				   else echo "<button>buy</button><br/></th>";
+				   else echo "<button>sell</button><br/></th>";
 				   ?>
-				   <th>牛奶吐司<br/><img src="img/2.png"width="200"height="150"/><br/>價錢:50元&nbsp;&nbsp;&nbsp;時間:6min<br/>
+				   <th>牛奶吐司<br/><img src="img/2.png"width="200"height="150"/><br/>價錢:125元&nbsp;&nbsp;&nbsp;時間:6min<br/>
 				   <?php
-				   $sqlb = "select * from playerbread where pname='$pname' and bid=7 ";
+				   $sqlb = "select * from playerbread where pid='$pid' and bid=7 ";
 				   $results=mysqli_query($conn,$sqlb);
 				   if($rows=mysqli_fetch_array($results)){
 						   echo "庫存: ".$rows["bnum"]."個 ";
 					   }
 				   else echo "庫存 0個 ";
 				   ?>
-				   &nbsp;&nbsp;&nbsp;<img src="img/15.jpg"width="25"height="20"/>
+				   &nbsp;&nbsp;&nbsp;<img src="img/15.gif"width="25"height="20"/>
 				   <?php
-				   $sqlb = "select * from playerbread  where pname='$pname' and bid=7 ";
+				   $sqlb = "select * from playerbread  where pid='$pid' and bid=7 ";
 				   $results=mysqli_query($conn,$sqlb);
 				   if($rs=mysqli_fetch_array($results)){
 					   if($rs["bnum"]==0){
-						   echo "<button>buy</button><br/></th>";
+						   echo "<button>sell</button><br/></th>";
 					   }
-					   else echo "<button><a href='breadbuy.php?id=",7 ,"'>buy</a></button><br/></th>";
+					   else echo "<button><a href='breadbuy.php?id=",7 ,"'>sell</a></button><br/></th>";
 				   }
-				   else echo "<button>buy</button><br/></th>";
+				   else echo "<button>sell</button><br/></th>";
 				   ?>
-				   <th>燕麥吐司<br/><img src="img/7.png"width="200"height="150"/><br/>價錢:55元&nbsp;&nbsp;&nbsp;時間:7min<br/>
+				   <th>燕麥吐司<br/><img src="img/7.png"width="200"height="150"/><br/>價錢:140元&nbsp;&nbsp;&nbsp;時間:7min<br/>
 				   <?php
-				   $sqlb = "select * from playerbread where pname='$pname' and bid=8 ";
+				   $sqlb = "select * from playerbread where pid='$pid' and bid=8 ";
 				   $results=mysqli_query($conn,$sqlb);
 				   if($rows=mysqli_fetch_array($results)){
 						   echo "庫存: ".$rows["bnum"]."個 ";
 					   }
 				   else echo "庫存 0個 ";
 				   ?>
-				   &nbsp;&nbsp;&nbsp;<img src="img/15.jpg"width="25"height="20"/>
+				   &nbsp;&nbsp;&nbsp;<img src="img/15.gif"width="25"height="20"/>
 				   <?php
-				   $sqlb = "select * from playerbread  where pname='$pname' and bid=8 ";
+				   $sqlb = "select * from playerbread  where pid='$pid' and bid=8 ";
 				   $results=mysqli_query($conn,$sqlb);
 				   if($rs=mysqli_fetch_array($results)){
 					   if($rs["bnum"]==0){
-						   echo "<button>buy</button><br/></th>";
+						   echo "<button>sell</button><br/></th>";
 					   }
-					   else echo "<button><a href='breadbuy.php?id=",8,"'>buy</a></button><br/></th>";
+					   else echo "<button><a href='breadbuy.php?id=",8,"'>sell</a></button><br/></th>";
 				   }
-				   else echo "<button>buy</button><br/></th>";
+				   else echo "<button>sell</button><br/></th>";
 				   ?>
 				   </tr></thead>
 
@@ -281,6 +288,9 @@ font-weight:bold;
 	</div>
 	<div id="picture2">
 		<p><img src="img/m5.gif"width="200"/ ></p>
+	</div>
+	<div id="picture3">
+		<p><img src="img/25.gif"width="200"/ ></p>
 	</div>
 </div>
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
