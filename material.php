@@ -28,6 +28,7 @@ background-repeat: no-repeat;
 padding:8px 0px 3px 10px;
 opacity:0.7;
 letter-spacing: 4pt;
+font-size:14pt;
 }
 #picture {
 position:absolute;
@@ -81,61 +82,69 @@ background-image:url(img/back.jpg);
                     <table align="center"  cellspacing="10" cellpadding="5" >
                     <thead><tr><br/>
                     <th width="200"height="150"align="Center">薑餅人<br/><img src="img/8.png"width="175px"height="150px"/><br/>材料包：1 
-                    &nbsp;&nbsp;&nbsp;<img src="img/15.jpg"width="25"height="20"/> 
+                    &nbsp;&nbsp;&nbsp;<img src="img/15.gif"width="25"height="20"/> 
                     <?php
 				    $sqlb = "select * from player where pid='$pid'";
 				    $results=mysqli_query($conn,$sqlb);
 				    if($rs=mysqli_fetch_array($results)){
-					    if($rs["level"] >= 1){
+                        if($rs["coin"] > 14){
+					    if($rs["level"] >= 1){      
                             if($rs["material"] < 0 ){
                                 echo "<button>buy</button><br/></th>";
                             }
                             else echo "<button><a href='materialbuy.php?id=",1 ,"'>buy</a></button><br/></th>";
                             }
+                        }    
 				    }
 				    else echo "<button>buy</button><br/></th>";
 				    ?>
                     <th width="200"height="150"align="Center">甜甜圈<br/><img src="img/6.png"width="175"height="150"/></button><br/>材料包：2
-                    &nbsp;&nbsp;&nbsp;<img src="img/15.jpg"width="25"height="20"/> 
+                    &nbsp;&nbsp;&nbsp;<img src="img/15.gif"width="25"height="20"/> 
                     <?php
 				    $sqlb = "select * from player where pid='$pid'  ";
 				    $results=mysqli_query($conn,$sqlb);
 				    if($rs=mysqli_fetch_array($results)){
+                        if($rs["coin"] > 14){
                         if($rs["level"] >= 2){
 					    if($rs["material"] < 0){
 						    echo "<button>buy</button><br/></th>";
 					    }
 					    else echo "<button><a href='materialbuy.php?id=",2 ,"'>buy</a></button><br/></th>";
                         }
+                        }
 				    }
 				    else echo "<button>buy</button><br/></th>";
 				    ?>
                     <th width="200"height="150"align="Center">紅豆麵包<br/><img src="img/1.png"width="175"height="150"/><br/>材料包：3
-                    &nbsp;&nbsp;&nbsp;<img src="img/15.jpg"width="25"height="20"/> 
+                    &nbsp;&nbsp;&nbsp;<img src="img/15.gif"width="25"height="20"/> 
                     <?php
 				    $sqlb = "select * from player  where pid='$pid'  ";
 				    $results=mysqli_query($conn,$sqlb);
 				    if($rs=mysqli_fetch_array($results)){
+                        if($rs["coin"] > 14){
                         if($rs["level"] >= 3){
 					    if($rs["material"] < 0){
 						    echo "<button>buy</button><br/></th>";
 					    }
 					    else echo "<button><a href='materialbuy.php?id=",3 ,"'>buy</a></button><br/></th>";
                         }
+                        }
 				    }
 				    else echo "<button>buy</button><br/></th>";
 				    ?>
                     <th width="200"height="150"align="Center">杯子蛋糕<br/><img src="img/4.png"width="175"height="150"/><br/>材料包：4
-                    &nbsp;&nbsp;&nbsp;<img src="img/15.jpg"width="25"height="20"/> 
+                    &nbsp;&nbsp;&nbsp;<img src="img/15.gif"width="25"height="20"/> 
                     <?php
 				    $sqlb = "select * from player  where pid='$pid' ";
 				    $results=mysqli_query($conn,$sqlb);
 				    if($rs=mysqli_fetch_array($results)){
+                        if($rs["coin"] > 14){
                         if($rs["level"] >= 4){
 					    if($rs["material"] < 0){
 						    echo "<button>buy</button><br/></th>";
 					    }
 					    else echo "<button><a href='materialbuy.php?id=",4 ,"'>buy</a></button><br/></th>";
+                        }
                         }
 				    }
 				    else echo "<button>buy</button><br/></th>";
@@ -143,61 +152,69 @@ background-image:url(img/back.jpg);
                     </tr></thead>
                     <thead><tr>
                     <th width="200"height="150"align="Center">法國麵包<br/><img src="img/5.png"width="175"height="150"/><br/>材料包：5
-                    &nbsp;&nbsp;&nbsp;<img src="img/15.jpg"width="25"height="20"/> 
+                    &nbsp;&nbsp;&nbsp;<img src="img/15.gif"width="25"height="20"/> 
                     <?php
 				    $sqlb = "select * from player  where pid='$pid'  ";
 				    $results=mysqli_query($conn,$sqlb);
 				    if($rs=mysqli_fetch_array($results)){
+                        if($rs["coin"] > 14){
                         if($rs["level"] >= 5){
 					    if($rs["material"] < 0){
 						    echo "<button>buy</button><br/></th>";
 					    }
 					    else echo "<button><a href='materialbuy.php?id=",5 ,"'>buy</a></button><br/></th>";
                         }
+                        }
 				    }
 				    else echo "<button>buy</button><br/></th>";
 				    ?>
                     <th width="200"height="150"align="Center">牛角麵包<br/><img src="img/3.png"width="175"height="150"/><br/>材料包：6
-                    &nbsp;&nbsp;&nbsp;<img src="img/15.jpg"width="25"height="20"/> 
+                    &nbsp;&nbsp;&nbsp;<img src="img/15.gif"width="25"height="20"/> 
                     <?php
 				    $sqlb = "select * from player  where pid='$pid' ";
 				    $results=mysqli_query($conn,$sqlb);
 				    if($rs=mysqli_fetch_array($results)){
+                        if($rs["coin"] > 14){
                         if($rs["level"] >= 6){
 					    if($rs["material"] < 0){
 						    echo "<button>buy</button><br/></th>";
 					    }
 					    else echo "<button><a href='materialbuy.php?id=",6 ,"'>buy</a></button><br/></th>";
                         }
+                        }
 				    }
 				    else echo "<button>buy</button><br/></th>";
 				    ?>
                     <th width="200"height="150"align="Center">牛奶吐司<br/><img src="img/2.png"width="175"height="150"/><br/>材料包：7
-                    &nbsp;&nbsp;&nbsp;<img src="img/15.jpg"width="25"height="20"/> 
+                    &nbsp;&nbsp;&nbsp;<img src="img/15.gif"width="25"height="20"/> 
                     <?php
 				    $sqlb = "select * from player  where pid='$pid'";
 				    $results=mysqli_query($conn,$sqlb);
 				    if($rs=mysqli_fetch_array($results)){
+                        if($rs["coin"] > 14){
                         if($rs["level"] >= 7){
 					    if($rs["material"] < 0){
 						    echo "<button>buy</button><br/></th>";
 					    }
 					    else echo "<button><a href='materialbuy.php?id=",7 ,"'>buy</a></button><br/></th>";
                         }
+                        }
 				    }
 				    else echo "<button>buy</button><br/></th>";
 				    ?>
                     <th width="200"height="150"align="Center">燕麥吐司<br/><img src="img/7.png"width="175"height="150"/><br/>材料包：8
-                    &nbsp;&nbsp;&nbsp;<img src="img/15.jpg"width="25"height="20"/> 
+                    &nbsp;&nbsp;&nbsp;<img src="img/15.gif"width="25"height="20"/> 
                     <?php
 				    $sqlb = "select * from player  where pid='$pid'  ";
 				    $results=mysqli_query($conn,$sqlb);
 				    if($rs=mysqli_fetch_array($results)){
+                        if($rs["coin"] > 14){
+                        if($rs["level"] >= 8){
 					    if($rs["material"] < 0){
-                            if($rs["level"] >= 8){
 						    echo "<button>buy</button><br/></th>";
 					    }
 					    else echo "<button><a href='materialbuy.php?id=",8 ,"'>buy</a></button><br/></th>";
+                        }
                         }
 				    }
 				    else echo "<button>buy</button><br/></th>";
