@@ -19,45 +19,45 @@ $id=(int)$_GET["id"];
     }
 						   
     if($id==2){
-        $sql2 = "update player set material=material+1 where pid='$pid'  ";
+        $sql2 = "update player set material=material+2 where pid='$pid'  ";
         mysqli_query($conn,$sql2) or die("MySQL query error");
-        $sqlc = "update player set coin=coin-15  where pid='$pid' ";
+        $sqlc = "update player set coin=coin-30  where pid='$pid' ";
         mysqli_query($conn,$sqlc) or die("MySQL query error"); 		
     }
     if($id==3){
-        $sql3 = "update player set material=material+2 where pid='$pid'  ";
+        $sql3 = "update player set material=material+3 where pid='$pid'  ";
         mysqli_query($conn,$sql3) or die("MySQL query error");
-        $sqlc = "update player set coin=coin-30  where pid='$pid' ";
+        $sqlc = "update player set coin=coin-45  where pid='$pid' ";
         mysqli_query($conn,$sqlc) or die("MySQL query error"); 		
     }
     if($id==4){
-        $sql4 = "update player set material=material+2 where pid='$pid' ";
+        $sql4 = "update player set material=material+4 where pid='$pid' ";
         mysqli_query($conn,$sql4) or die("MySQL query error");
-        $sqlc = "update player set coin=coin-30  where pid='$pid' ";
+        $sqlc = "update player set coin=coin-60  where pid='$pid' ";
         mysqli_query($conn,$sqlc) or die("MySQL query error"); 		
     }
     if($id==5){
-        $sql5 = "update player set material=material+2 where pid='$pid' ";
+        $sql5 = "update player set material=material+5 where pid='$pid' ";
         mysqli_query($conn,$sql5) or die("MySQL query error");
-        $sqlc = "update player set coin=coin-30  where pid='$pid' ";
+        $sqlc = "update player set coin=coin-75  where pid='$pid' ";
         mysqli_query($conn,$sqlc) or die("MySQL query error"); 		
     }
     if($id==6){
-        $sql6 = "update player set material=material+3 where pid='$pid'  ";
+        $sql6 = "update player set material=material+6 where pid='$pid'  ";
         mysqli_query($conn,$sql6) or die("MySQL query error");
-        $sqlc = "update player set coin=coin-45  where pid='$pid' ";
+        $sqlc = "update player set coin=coin-90  where pid='$pid' ";
         mysqli_query($conn,$sqlc) or die("MySQL query error"); 		
     }
     if($id==7){
-        $sql7 = "update player set material=material+3 where pid='$pid'  ";
+        $sql7 = "update player set material=material+7 where pid='$pid'  ";
         mysqli_query($conn,$sql7) or die("MySQL query error");
-        $sqlc = "update player set coin=coin-45  where pid='$pid' ";
+        $sqlc = "update player set coin=coin-105  where pid='$pid' ";
         mysqli_query($conn,$sqlc) or die("MySQL query error"); 		
     }
     if($id==8){
-        $sql8 = "update player set material=material+3 where pid='$pid'  ";
+        $sql8 = "update player set material=material+8 where pid='$pid'  ";
         mysqli_query($conn,$sql8) or die("MySQL query error");
-        $sqlc = "update player set coin=coin-45  where pid='$pid' ";
+        $sqlc = "update player set coin=coin-120  where pid='$pid' ";
         mysqli_query($conn,$sqlc) or die("MySQL query error"); 		
     }
 
