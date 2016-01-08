@@ -1,6 +1,6 @@
 <?php
 require("config.php");
-$pname=$_SESSION['pname'];
+$pid=$_SESSION['uID'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,7 +66,7 @@ font-weight:bold;
             <div class="row no-gutter" id="section1-1">
                 <div class="col-md-3" id="leftbar">
 					<?php
-                        $sql1 = "select  * from player  where pname='$pname'";
+                        $sql1 = "select  * from player  where pid='$pid'";
                         $results1=mysqli_query($conn,$sql1);
                         if($rows=mysqli_fetch_array($results1)){
                             echo"<div id=\"column\">",
