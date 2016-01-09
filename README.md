@@ -1,24 +1,24 @@
 # 1041-SE-Team5
 
-##¦Ñ®v»İ¨D:
+##è€å¸«éœ€æ±‚:
 
-[x] ª±®aµn¤J«á¥i¥H¶i¦æ¹CÀ¸
-[x] ª±®a¾Ö¦³¤@­Ó¯N½c¡A¥i¥H¯N¤£¦P¤f¨ıÄÑ¥]
+- [x] ç©å®¶ç™»å…¥å¾Œå¯ä»¥é€²è¡ŒéŠæˆ²
+- [x] ç©å®¶æ“æœ‰ä¸€å€‹çƒ¤ç®±ï¼Œå¯ä»¥çƒ¤ä¸åŒå£å‘³éºµåŒ…
 
-[x] ¨CºØÄÑ¥]·|¯Ó¥Î¤£¦P¼Æ¶qªº§÷®Æ¥]¡A§÷®Æ¥]»İ­nªá¿ú¶R
-[x] ¤£¦PÄÑ¥]»İ­nªº¯M°ö®É¶¡¤£¦P¡A»ù®æ¤]¤£¤@¼Ë¡C¯N¦nªºÄÑ¥]¥i¥H½æ¿ú
-[x] ¨C¦¸§¹¦¨ÄÑ¥]·|¼W¥[¸gÅç­È¡A¹F¨ì¤@©w¼Æ­È¥i¥H¤É¯Å¡A¤É¯Å«á¥i¥H»s§@ªºÄÑ¥]ºØÃş·|¼W¥[
+- [x] æ¯ç¨®éºµåŒ…æœƒè€—ç”¨ä¸åŒæ•¸é‡çš„ææ–™åŒ…ï¼Œææ–™åŒ…éœ€è¦èŠ±éŒ¢è²·
+- [x] ä¸åŒéºµåŒ…éœ€è¦çš„çƒ˜åŸ¹æ™‚é–“ä¸åŒï¼Œåƒ¹æ ¼ä¹Ÿä¸ä¸€æ¨£ã€‚çƒ¤å¥½çš„éºµåŒ…å¯ä»¥è³£éŒ¢
+- [x] æ¯æ¬¡å®ŒæˆéºµåŒ…æœƒå¢åŠ ç¶“é©—å€¼ï¼Œé”åˆ°ä¸€å®šæ•¸å€¼å¯ä»¥å‡ç´šï¼Œå‡ç´šå¾Œå¯ä»¥è£½ä½œçš„éºµåŒ…ç¨®é¡æœƒå¢åŠ 
 
-[x] ª±®a¥i¥Hªá¿ú¼WÁÊ¯N½c
+- [x] ç©å®¶å¯ä»¥èŠ±éŒ¢å¢è³¼çƒ¤ç®±
 
- ##ÃB¥~¥\¯à:
+ ##é¡å¤–åŠŸèƒ½:
  
- [x] ¥i¥Hµù¥U·sª±®a
- [x] ¬d¬İÄÑ¥]¹ÏÅ²
+- [x] å¯ä»¥è¨»å†Šæ–°ç©å®¶
+- [x] æŸ¥çœ‹éºµåŒ…åœ–é‘‘
   
   ##Use case:
-  ![GitHub Logo](https://github.com/NCNU-OpenSource/1041-SE-Team7/blob/master/schedule-report/final/usecase.png)<br>
+  ![GitHub Logo](https://github.com/NCNU-OpenSource/1041-SE-Team5/blob/master/Use%20Case.jpg)<br>
   ##DFD:
- ![GitHub Logo](https://github.com/NCNU-OpenSource/1041-SE-Team7/blob/master/schedule-report/final/DFD.png)<br>
+ ![GitHub Logo](https://github.com/NCNU-OpenSource/1041-SE-Team5/blob/master/DFD.JPG)<br>
   ##Class diagram:
-  ![GitHub Logo](https://github.com/NCNU-OpenSource/1041-SE-Team7/blob/master/schedule-report/final/ClassDiagram.png)<br>
+  ![GitHub Logo](https://github.com/NCNU-OpenSource/1041-SE-Team5/blob/master/Class%20Diagram.jpg)<br>
