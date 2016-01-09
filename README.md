@@ -17,7 +17,7 @@
 - [x] 查看麵包圖鑑
   
   ##Use case:
-  ![GitHub Logo](https://github.com/NCNU-OpenSource/1041-SE-Team5/blob/master/Use%20Case.jpg)<br>
+  ![GitHub Logo](https://github.com/NCNU-OpenSource/1041-SE-Team5/blob/master/UseCase.jpg)<br>
   ##DFD:
  ![GitHub Logo](https://github.com/NCNU-OpenSource/1041-SE-Team5/blob/master/DFD.JPG)<br>
   ##Class diagram:
