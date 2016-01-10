@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.3.11
+-- version 4.4.14
 -- http://www.phpmyadmin.net
 --
 -- 主機: 127.0.0.1
--- 產生時間： 2016 �?01 ??08 ??11:54
--- 伺服器版本: 5.6.24
--- PHP 版本： 5.6.8
+-- 產生時間： 2016-01-10 14:19:25
+-- 伺服器版本: 5.6.26
+-- PHP 版本： 5.6.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- 資料庫： `kitchen`
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `ovenplayer` (
   `bid` int(11) NOT NULL,
   `btime` int(11) NOT NULL,
   `status` int(11) NOT NULL DEFAULT '4'
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- 資料表的匯出資料 `ovenplayer`
@@ -75,13 +75,17 @@ INSERT INTO `ovenplayer` (`opid`, `oid`, `pid`, `bid`, `btime`, `status`) VALUES
 (3, 3, '111', 0, 0, 3),
 (4, 4, '111', 0, 0, 3),
 (5, 1, '222', 0, 0, 0),
-(6, 2, '222', 0, 0, 4),
+(6, 2, '222', 0, 0, 3),
 (7, 3, '222', 0, 0, 4),
 (8, 4, '222', 0, 0, 4),
 (9, 1, '123', 0, 0, 0),
 (10, 2, '123', 0, 0, 4),
 (11, 3, '123', 0, 0, 4),
-(12, 4, '123', 0, 0, 4);
+(12, 4, '123', 0, 0, 4),
+(13, 1, '555', 0, 0, 0),
+(14, 2, '555', 0, 0, 4),
+(15, 3, '555', 0, 0, 4),
+(16, 4, '555', 0, 0, 4);
 
 -- --------------------------------------------------------
 
@@ -93,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `player` (
   `pid` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `pname` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `pwd` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `exp` int(11) NOT NULL DEFAULT '0',
+  `exp` bigint(100) NOT NULL DEFAULT '0',
   `level` int(11) NOT NULL DEFAULT '1',
   `coin` int(11) NOT NULL DEFAULT '500',
   `material` int(11) NOT NULL
@@ -104,9 +108,10 @@ CREATE TABLE IF NOT EXISTS `player` (
 --
 
 INSERT INTO `player` (`pid`, `pname`, `pwd`, `exp`, `level`, `coin`, `material`) VALUES
-('111', 'a', '111', 114, 40, 999190, 999932),
+('111', 'a', '111', 129, 40, 999125, 999937),
 ('123', 'a', '123', 15, 1, 425, 3),
-('222', '222', '222', 0, 1, 30, 0);
+('222', '222', '222', 1899, 19, 1010, 10),
+('555', 'june', '555', 10, 1, 510, 0);
 
 -- --------------------------------------------------------
 
@@ -128,7 +133,9 @@ CREATE TABLE IF NOT EXISTS `playerbread` (
 INSERT INTO `playerbread` (`pbid`, `bid`, `pid`, `bnum`) VALUES
 ('111_1', 1, '111', 0),
 ('111_2', 2, '111', 0),
-('123_1', 1, '123', 2);
+('123_1', 1, '123', 2),
+('222_1', 1, '222', 2),
+('555_1', 1, '555', 0);
 
 --
 -- 已匯出資料表的索引
@@ -171,7 +178,7 @@ ALTER TABLE `bread`
 -- 使用資料表 AUTO_INCREMENT `ovenplayer`
 --
 ALTER TABLE `ovenplayer`
-  MODIFY `opid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+  MODIFY `opid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

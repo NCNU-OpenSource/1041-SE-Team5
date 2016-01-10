@@ -25,15 +25,15 @@ if($rowlv=mysqli_fetch_array($result)){
     if($rowlv['exp']>=100*$rowlv['level']){
         $sqllvup = "update player set level=level+1 , exp=exp".-100*$rowlv['level']." where pid='$id'";
         mysqli_query($conn,$sqllvup);
-        if($rowlv['level']=='10'){
+        if($rowlv['level']=='9'){
             $sqlunlock1 = "update ovenplayer set status=3 where pid='$id' and oid='2'";
             mysqli_query($conn,$sqlunlock1);
         }
-        if($rowlv['level']=='20'){
+        if($rowlv['level']=='19'){
             $sqlunlock2 = "update ovenplayer set status=3 where pid='$id' and oid='3'";
             mysqli_query($conn,$sqlunlock2);
         }
-        if($rowlv['level']=='30'){
+        if($rowlv['level']=='29'){
             $sqlunlock3 = "update ovenplayer set status=3 where pid='$id' and oid='4'";
             mysqli_query($conn,$sqlunlock3);
         }

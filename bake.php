@@ -127,7 +127,7 @@
                                               $results1=mysqli_query($conn,$sql1);
                                               if($rows=mysqli_fetch_array($results1)){
                                                 $m_num=$rows["material"];
-                                                echo "<input id=\"m_num\" name=\"m_num\" type=\"number\" min=\"0\" max=\"$m_num\" value=\"2\">";
+                                                echo "<input id=\"m_num\" name=\"m_num\" type=\"number\" min=\"0\" max=\"$m_num\" value=\"0\">";
                                               }
                                         ?>
                                         <input id="oven_s" name="oven_s" type="hidden" value="1">
@@ -150,7 +150,7 @@
                                               $results1=mysqli_query($conn,$sql1);
                                               if($rows=mysqli_fetch_array($results1)){
                                                 $m_num=$rows["material"];
-                                                echo "<input id=\"m_num\" name=\"m_num\" type=\"number\" min=\"0\" max=\"$m_num\" value=\"2\">";
+                                                echo "<input id=\"m_num\" name=\"m_num\" type=\"number\" min=\"0\" max=\"$m_num\" value=\"0\">";
                                               }
                                         ?>
                                         <input id="oven_s" name="oven_s" type="hidden" value="2">
@@ -175,7 +175,7 @@
                                               $results1=mysqli_query($conn,$sql1);
                                               if($rows=mysqli_fetch_array($results1)){
                                                 $m_num=$rows["material"];
-                                                echo "<input id=\"m_num\" name=\"m_num\" type=\"number\" min=\"0\" max=\"$m_num\" value=\"2\">";
+                                                echo "<input id=\"m_num\" name=\"m_num\" type=\"number\" min=\"0\" max=\"$m_num\" value=\"0\">";
                                               }
                                         ?>
                                         <input id="oven_s" name="oven_s" type="hidden" value="3">
@@ -198,7 +198,7 @@
                                               $results1=mysqli_query($conn,$sql1);
                                               if($rows=mysqli_fetch_array($results1)){
                                                 $m_num=$rows["material"];
-                                                echo "<input id=\"m_num\" name=\"m_num\" type=\"number\" min=\"0\" max=\"$m_num\" value=\"2\">";
+                                                echo "<input id=\"m_num\" name=\"m_num\" type=\"number\" min=\"0\" max=\"$m_num\" value=\"0\">";
                                               }
                                         ?>
                                         <input id="oven_s" name="oven_s" type="hidden" value="4">
